@@ -1,0 +1,133 @@
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-faded" style="background-color: #EA3340;">
+
+        <a class="navbar-brand" href="#">Bootstrap Machine</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div id="navbarNavDropdown" class="navbar-collapse collapse">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="{{ url('/login') }}">Login</a>
+                </li>
+                <li class="nav-item">
+                    <button class="btn btn-outline-light my-2 my-sm-0" type="submit">Join Free</button>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+
+
+<div class="jumbotron jumbo-a">
+  <h1 class="display-4 text-center">Drag & Drop Bootstrap 4 Templates</h1>
+  <p class="lead text-center">Build Bootstrap templates (like this one!) in seconds.</p>
+  <!-- <hr class="my-4"> -->
+  <!-- <p>It uses utility classes for typography and spacing to space content out within the larger container.</p> -->
+  
+</div>
+
+<h1 *ngIf="authService.user | async">Welcome {{ (authService.user | async)?.email }}!</h1>
+
+<div *ngIf="!(authService.user | async)">
+  <input type="text" [(ngModel)]="email" placeholder="email">
+  <input type="password" [(ngModel)]="password" placeholder="password">
+
+  <button (click)="signup()" [disabled]="!email || !password">
+    Signup
+  </button>
+
+  <button (click)="login()" [disabled]="!email || !password">
+    Login
+  </button>
+</div>
+
+<button (click)="logout()" *ngIf="authService.user | async">
+  Logout
+</button>
+
+<section class="jumbo-b">
+<div class="container">
+<div class="row">
+  <div class="col-md">
+<img src="img/computer_rocket.png" class="logo" style="max-width:360px; margin-top:-50px">
+  <p class="lead">
+    <a class="btn btn-primary btn-lg" href="#" role="button">Join Free</a>
+  </p>
+  </div>
+
+</div>
+</div>
+</section>
+
+<section>
+<div class="container">
+      <h3 class="display-6 text-center">Drag & Drop Bootstrap 4 Templates</h3>
+
+<div class="row">
+
+  <div class="col-md">
+<div class="card text-center">
+  <div class="card-header">
+    Featured
+  </div>
+  <div class="card-body">
+    <h4 class="card-title">Special title treatment</h4>
+    <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+    <a href="#" class="btn btn-primary">Go somewhere</a>
+  </div>
+  <div class="card-footer text-muted">
+    2 days ago
+  </div>
+</div>
+</div>
+
+  <div class="col-md">
+<div class="card text-center">
+  <div class="card-header">
+    Featured
+  </div>
+  <div class="card-body">
+    <h4 class="card-title">Special title treatment</h4>
+    <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+    <a href="#" class="btn btn-primary">Go somewhere</a>
+  </div>
+  <div class="card-footer text-muted">
+    2 days ago
+  </div>
+</div>
+</div>
+
+  <div class="col-md">
+<div class="card text-center">
+  <div class="card-header">
+    Featured
+  </div>
+  <div class="card-body">
+    <h4 class="card-title">Special title treatment</h4>
+    <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+    <a href="#" class="btn btn-primary">Go somewhere</a>
+  </div>
+  <div class="card-footer text-muted">
+    2 days ago
+  </div>
+</div>
+</div>
+
+</div>
+
+</div>
+
+  </section>
+
+  <section>
+<div class="container">
+<div class="row">
+ 
+<span>Bootstrap Machine. 2017.</span>
+</div>
+
+</div>
+
+  </section>
+
