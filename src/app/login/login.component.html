@@ -1,3 +1,32 @@
-<p>
-  login works!
-</p>
+  <section class="bg-dark py-5">
+  <div class="container">
+
+<div class="row">
+	<div class="col-md-4 m-auto">
+      <!-- <form class="form-signin"> -->
+      	<div class="my-5 bg-light p-2 rounded">
+        <h3 class="form-signin-heading">Please sign in</h3>
+        
+        <label for="inputEmail" class="sr-only">Email address</label>
+<input type="email" [(ngModel)]="email" class="form-control mb-2" placeholder="email" required autofocus>
+        
+        <label for="inputPassword" class="sr-only">Password</label>
+          <input type="password" [(ngModel)]="password" class="form-control mb-2" placeholder="Password" required>
+
+        <!-- <div class="checkbox">
+          <label>
+            <input type="checkbox" value="remember-me"> Remember me
+          </label>
+        </div> -->
+          <button class="btn btn-lg btn-primary btn-block"  (click)="login()" [disabled]="!email || !password">
+    Login
+  </button>
+</div>
+<footer class="text-light text-center">Boostrap Machine. 2018.</footer>
+      <!-- </form> -->
+
+<!-- {{errorMessage}} -->
+    </div>
+</div>
+</div>
+</section>

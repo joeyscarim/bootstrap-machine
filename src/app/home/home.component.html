@@ -1,14 +1,14 @@
 
     <nav class="navbar navbar-expand-lg navbar-dark bg-faded" style="background-color: #EA3340;">
 
-        <a class="navbar-brand" href="#">Bootstrap Machine</a>
+        <a class="navbar-brand" href="#">Bootstrap Machine -- UNDER CONSTUCTION _ COMING SOON</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
         <div id="navbarNavDropdown" class="navbar-collapse collapse">
             <ul class="navbar-nav ml-auto">
                 <li class="nav-item">
-                    <a class="nav-link" href="{{ url('/login') }}">Login</a>
+                    <a class="nav-link text-white" href="{{ url('/login') }}">Login</a>
                 </li>
                 <li class="nav-item">
                     <button class="btn btn-outline-light my-2 my-sm-0" type="submit">Join Free</button>
@@ -20,14 +20,14 @@
 
 
 <div class="jumbotron jumbo-a">
-  <h1 class="display-4 text-center">Drag & Drop Bootstrap 4 Templates</h1>
-  <p class="lead text-center">Build Bootstrap templates (like this one!) in seconds.</p>
+  <h1 class="display-4 text-center text-light">Rapidly Create Boostrap Boilerplate Templates</h1>
+  <p class="lead text-center text-light">For developers. By Developers.</p>
   <!-- <hr class="my-4"> -->
   <!-- <p>It uses utility classes for typography and spacing to space content out within the larger container.</p> -->
   
 </div>
 
-<h1 *ngIf="authService.user | async">Welcome {{ (authService.user | async)?.email }}!</h1>
+<!-- <h1 *ngIf="authService.user | async">Welcome {{ (authService.user | async)?.email }}!</h1>
 
 <div *ngIf="!(authService.user | async)">
   <input type="text" [(ngModel)]="email" placeholder="email">
@@ -45,14 +45,14 @@
 <button (click)="logout()" *ngIf="authService.user | async">
   Logout
 </button>
-
+ -->
 <section class="jumbo-b">
 <div class="container">
 <div class="row">
   <div class="col-md">
-<img src="img/computer_rocket.png" class="logo" style="max-width:360px; margin-top:-50px">
+<img src="../assets/img/computer_rocket.png" class="logo mx-auto d-block" style="max-width:360px; margin-top:-50px">
   <p class="lead">
-    <a class="btn btn-primary btn-lg" href="#" role="button">Join Free</a>
+    <a class="btn btn-primary btn-lg mx-auto d-block" href="#" role="button" style="max-width:360px">Join Free</a>
   </p>
   </div>
 
@@ -62,55 +62,46 @@
 
 <section>
 <div class="container">
-      <h3 class="display-6 text-center">Drag & Drop Bootstrap 4 Templates</h3>
+      <h3 class="display-5 text-center  py-4">Get started creating templates (like this one) in 3 steps</h3>
 
 <div class="row">
 
   <div class="col-md">
 <div class="card text-center">
   <div class="card-header">
-    Featured
+    Signup || Login
   </div>
   <div class="card-body">
-    <h4 class="card-title">Special title treatment</h4>
-    <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-    <a href="#" class="btn btn-primary">Go somewhere</a>
+    <h4 class="card-title">☝🏼</h4>
+    <p class="card-text">Accounts are free for life. You can pay to unlock the full element catalog at any time (coming soon!)</p>
   </div>
-  <div class="card-footer text-muted">
-    2 days ago
-  </div>
+  
 </div>
 </div>
 
   <div class="col-md">
 <div class="card text-center">
   <div class="card-header">
-    Featured
+    Drag && Drop
   </div>
   <div class="card-body">
-    <h4 class="card-title">Special title treatment</h4>
-    <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-    <a href="#" class="btn btn-primary">Go somewhere</a>
+    <h4 class="card-title">✌🏼</h4>
+    <p class="card-text">Create any template you want from our element library</p>
   </div>
-  <div class="card-footer text-muted">
-    2 days ago
-  </div>
+  
 </div>
 </div>
 
   <div class="col-md">
 <div class="card text-center">
   <div class="card-header">
-    Featured
+    Download && Use
   </div>
   <div class="card-body">
-    <h4 class="card-title">Special title treatment</h4>
-    <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-    <a href="#" class="btn btn-primary">Go somewhere</a>
+    <h4 class="card-title"> 🖐🏼</h4>
+    <p class="card-text">Use your boilerplate to simply for work. Use your template however you like, except for resale.</p>
   </div>
-  <div class="card-footer text-muted">
-    2 days ago
-  </div>
+  
 </div>
 </div>
 
@@ -120,11 +111,12 @@
 
   </section>
 
-  <section>
+  <section class="mt-5 bg-dark">
 <div class="container">
 <div class="row">
  
-<span>Bootstrap Machine. 2017.</span>
+<p class="text-center text-light p-3">Bootstrap Machine. 2018.</p>
+Built with Bootstrap Machine. 2017. hello@bootstrapmachine.com (email coming soon)
 </div>
 
 </div>
