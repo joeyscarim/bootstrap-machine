@@ -1,4 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, HostBinding } from '@angular/core';
+import { Router } from '@angular/router';
+import { AuthService } from './../auth.service';
 
 @Component({
   selector: 'app-signup',
@@ -7,9 +9,19 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SignupComponent implements OnInit {
 
-  constructor() { }
+	email: string;
+	password: string;
+
+
+  constructor(public authService: AuthService) { }
 
   ngOnInit() {
+  }
+
+    signup(){
+  	console.log("CLICKED!");
+     this.authService.signup(this.email, this.password);
+    this.email = this.password = '';
   }
 
 }
