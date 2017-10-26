@@ -1,12 +1,19 @@
 .jumbo-b{
-	background-color:#98bbd3;
+	background-color:#B1DDF8;
 }
 
-.jumbotron {
-	margin-bottom:0px;
+	#section-jumbotron{
+		    background-color: #0285E0;
+    background-image: url('/assets/img/dark-geometric.png');
+
 	}
 
-	.jumbo-a{
-		background-image: url('/assets/img/darkness.png');
+	#section-cta{
+		background-color:#B1DDF8;
+	
+	}
+
+	#section-footer{
+				    background-color: #296b9b;
 
 	}

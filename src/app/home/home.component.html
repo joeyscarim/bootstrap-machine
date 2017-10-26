@@ -1,128 +1,96 @@
-
-    <!-- <div ng-include="app.login"></div> -->
-
-
-    <nav class="navbar navbar-expand-lg navbar-dark bg-faded" style="background-color: #EA3340;">
-
-        <a class="navbar-brand" href="#">Bootstrap Machine</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div id="navbarNavDropdown" class="navbar-collapse collapse">
-            <ul class="navbar-nav ml-auto">
-                <li class="nav-item">
-                    <a class="nav-link text-light" routerLink="/login">Login</a>
-                </li>
-                <li class="nav-item">
-                    <a routerLink="/signup" class="btn btn-outline-light">Join Free</a>
-                </li>
-            </ul>
-        </div>
-    </nav>
-
-
-
-<div class="jumbotron jumbo-a">
-  <h1 class="display-4 text-center text-light">Rapidly Create Boostrap Boilerplate Templates</h1>
-  <p class="lead text-center text-light">For developers. By Developers.</p>
-  <!-- <hr class="my-4"> -->
-  <!-- <p>It uses utility classes for typography and spacing to space content out within the larger container.</p> -->
-  
-</div>
-
-<!-- <h1 *ngIf="authService.user | async">Welcome {{ (authService.user | async)?.email }}!</h1>
-
-<div *ngIf="!(authService.user | async)">
-  <input type="text" [(ngModel)]="email" placeholder="email">
-  <input type="password" [(ngModel)]="password" placeholder="password">
-
-  <button (click)="signup()" [disabled]="!email || !password">
-    Signup
+<nav class="navbar navbar-expand-lg navbar-dark bg-faded" style="background-color: #dc3545;">
+  <a class="navbar-brand" href="#">Bootstrap Machine</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
   </button>
-
-  <button (click)="login()" [disabled]="!email || !password">
-    Login
-  </button>
-</div>
-
-<button (click)="logout()" *ngIf="authService.user | async">
-  Logout
-</button>
- -->
-<section class="jumbo-b">
-<div class="container">
-<div class="row">
-  <div class="col-md">
-<img src="../assets/img/computer_rocket.png" class="logo mx-auto d-block" style="max-width:360px; margin-top:-50px">
-  <p class="lead">
-    <a class="btn btn-primary btn-lg mx-auto d-block" routerLink="/login" role="button" style="max-width:360px">Join Free</a>
-  </p>
+  <div id="navbarNavDropdown" class="navbar-collapse collapse">
+    <ul class="navbar-nav ml-auto">
+      <li class="nav-item">
+        <a class="nav-link text-light" routerLink="/login">Login</a>
+      </li>
+      <li class="nav-item">
+        <a routerLink="/signup" class="btn btn-outline-light">Join Free</a>
+      </li>
+    </ul>
   </div>
+</nav>
 
-</div>
-</div>
+<section id="section-jumbotron">
+  <div class="container-fluid p-5">
+    <h1 class="display-4 text-center text-light">Rapidly Create Boostrap Boilerplate Templates</h1>
+    <p class="lead text-center text-light p-2">Clean <strong>Bootstrap 4</strong> to help you quickly <em>launch</em> any project</p>
+  </div>
+</section>
+
+<section class="jumbo-b">
+  <div class="container">
+    <div class="row">
+      <div class="col-md">
+        <img src="../assets/img/computer_rocket.png" class="logo mx-auto d-block" style="max-width:360px; margin-top:-30px">
+        <p class="lead">
+          <a class="btn btn-danger btn-lg mx-auto d-block mt-3" routerLink="/login" role="button" style="max-width:360px">Join Free</a>
+        </p>
+      </div>
+
+    </div>
+  </div>
 </section>
 
 <section>
-<div class="container">
-      <h3 class="display-5 text-center  py-4">Get started creating templates (like this one) in 3 steps</h3>
+  <div class="container">
+    <h3 class="display-5 text-center p-4">Start creating templates (like this one) in <strong>3 steps...</strong></h3>
 
-<div class="row">
+    <div class="row mb-4">
 
-  <div class="col-md">
-<div class="card text-center">
-  <div class="card-header">
-    Signup || Login
+      <div class="col-md">
+        <div class="card text-center">
+          <div class="card-header">
+            <strong>1.</strong> Signup <strong>||</strong> Login
+          </div>
+          <div class="card-body">
+            <h4 class="card-title">☝🏼</h4>
+            <p class="card-text">Accounts are <strong>free for life</strong>. Unlock the full element catalog anytime for $9/month <strong>(coming soon)</strong>.</p>
+          </div>
+
+        </div>
+      </div>
+
+      <div class="col-md">
+        <div class="card text-center">
+          <div class="card-header">
+             <strong>2.</strong> Drag <strong>&&</strong> Drop
+          </div>
+          <div class="card-body">
+            <h4 class="card-title">✌🏼</h4>
+            <p class="card-text">Create your boilerplate templates using our element catalog, or choose a template from our <strong>prebuilt gallery</strong>.</p>
+          </div>
+
+        </div>
+      </div>
+
+      <div class="col-md">
+        <div class="card text-center">
+          <div class="card-header">
+             <strong>3.</strong> Download <strong>&&</strong> Use
+          </div>
+          <div class="card-body">
+            <h4 class="card-title"> 🖐🏼</h4>
+            <p class="card-text">Use your boilerplate to <strong>launch your project</strong>. Templates can be used for anything except resale.</p>
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+
   </div>
-  <div class="card-body">
-    <h4 class="card-title">☝🏼</h4>
-    <p class="card-text">Accounts are free for life. You can pay to unlock the full element catalog at any time (coming soon!)</p>
+
+</section>
+
+<section id="section-footer">
+  <div class="container">
+    <!-- <div class="row"> -->
+      <p class="text-center text-light p-4 mb-0">Bootstrap Machine. 2018.</p>
+    <!-- </div> -->
   </div>
-  
-</div>
-</div>
-
-  <div class="col-md">
-<div class="card text-center">
-  <div class="card-header">
-    Drag && Drop
-  </div>
-  <div class="card-body">
-    <h4 class="card-title">✌🏼</h4>
-    <p class="card-text">Create any template you want from our element library</p>
-  </div>
-  
-</div>
-</div>
-
-  <div class="col-md">
-<div class="card text-center">
-  <div class="card-header">
-    Download && Use
-  </div>
-  <div class="card-body">
-    <h4 class="card-title"> 🖐🏼</h4>
-    <p class="card-text">Use your boilerplate to simply for work. Use your template however you like, except for resale.</p>
-  </div>
-  
-</div>
-</div>
-
-</div>
-
-</div>
-
-  </section>
-
-  <section class="mt-5 bg-dark">
-<div class="container">
-<div class="row">
- 
-<p class="text-center text-light p-3">Bootstrap Machine. 2018.</p>
-Built with Bootstrap Machine. 2017. hello@bootstrapmachine.com (email coming soon)
-</div>
-
-</div>
-
-  </section>
-
+</section>
