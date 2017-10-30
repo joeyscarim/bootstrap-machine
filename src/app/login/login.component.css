@@ -1,0 +1,8 @@
+ #background{
+ 	/*margin-top:1000px;*/
+ background-color: #5185a9;
+    background-image: url('/assets/img/dark-geometric.png');
+    height:100%;
+    position:fixed;
+    width:100%;
+}

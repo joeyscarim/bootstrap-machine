@@ -16,6 +16,7 @@ import { routes } from './app.routes';
 
 import { DragulaModule } from 'ng2-dragula/ng2-dragula';
 import { AngularFontAwesomeModule } from 'angular-font-awesome/angular-font-awesome';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 
 
@@ -37,6 +38,7 @@ import { DashboardComponent } from './dashboard/dashboard.component';
 import { TemplateBuilderComponent } from './template-builder/template-builder.component';
 import { SidemenuComponent } from './sidemenu/sidemenu.component';
 import { DashboardResourcesComponent } from './dashboard-resources/dashboard-resources.component';
+import { ToastrModule } from 'ngx-toastr';
 
 @NgModule({
   declarations: [
@@ -59,7 +61,10 @@ import { DashboardResourcesComponent } from './dashboard-resources/dashboard-res
     FormsModule,
     routes,
     DragulaModule,
-    AngularFontAwesomeModule
+    AngularFontAwesomeModule,
+    BrowserAnimationsModule,
+        ToastrModule.forRoot(), // ToastrModule added
+
     // AngularFireModule.initializeApp(firebaseConfig)
   ],
   providers: [AuthService],

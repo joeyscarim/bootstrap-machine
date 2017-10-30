@@ -6,12 +6,14 @@ import * as firebase from 'firebase/app';
 import { Observable } from 'rxjs/Observable';
 
 import {Router} from '@angular/router';
+import { ToastrService } from 'ngx-toastr';
+
 
 @Injectable()
 export class AuthService {
   user: Observable<firebase.User>;
 
-  constructor(private firebaseAuth: AngularFireAuth,  private router: Router) {
+  constructor(private firebaseAuth: AngularFireAuth,  private router: Router, private toastr: ToastrService) {
     this.user = firebaseAuth.authState;
   }
 
@@ -20,13 +22,15 @@ export class AuthService {
       .auth
       .createUserWithEmailAndPassword(email, password)
       .then(value => {
-        console.log('Success!', value);
+        // console.log('Success!', value);
                 this.router.navigateByUrl('/dashboard');
 
       })
       .catch(err => {
-        console.log('Something went wrong:',err.message);
-        alert(err.message);
+        // console.log('Something went wrong:',err.message);
+        // alert(err.message);
+            this.toastr.error(err.message, 'Error!');
+
       });    
   }
 
@@ -36,16 +40,18 @@ export class AuthService {
       .signInWithEmailAndPassword(email, password)
       .then(value => {
         //do the routing here
-        console.log('Nice, it worked!');
-                this.router.navigateByUrl('/dashboard');
+        // console.log('Nice, it worked!');
+        this.router.navigateByUrl('/dashboard');
 
-        errorMessage = "it worked!";
+        // errorMessage = "it worked!";
         // return errorMessage;
       })
       .catch(err => {
-        console.log('Something went wrong:',err.message);
+        // console.log('Something went wrong:',err.message);
         // errorMessage = err.message;
-        alert(err.message)
+        // alert(err.message);
+            this.toastr.error(err.message, 'Error!');
+
 
       });
   }
