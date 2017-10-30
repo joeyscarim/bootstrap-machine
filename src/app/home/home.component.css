@@ -1,9 +1,9 @@
 .jumbo-b{
-	background-color:#B1DDF8;
+	background-color:#dceaf3;
 }
 
 	#section-jumbotron{
-		    background-color: #0285E0;
+		    background-color: #5185a9;
     background-image: url('/assets/img/dark-geometric.png');
 
 	}
@@ -14,6 +14,11 @@
 	}
 
 	#section-footer{
-				    background-color: #296b9b;
+				    background-color: #526f83;
 
+	}
+
+	.step-icon{
+		    color: #dc3646;
+    font-size: 2.5rem;
 	}

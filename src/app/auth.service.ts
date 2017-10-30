@@ -4,6 +4,7 @@ import { AngularFireAuth } from 'angularfire2/auth';
 import * as firebase from 'firebase/app';
 
 import { Observable } from 'rxjs/Observable';
+
 import {Router} from '@angular/router';
 
 @Injectable()
@@ -20,6 +21,8 @@ export class AuthService {
       .createUserWithEmailAndPassword(email, password)
       .then(value => {
         console.log('Success!', value);
+                this.router.navigateByUrl('/dashboard');
+
       })
       .catch(err => {
         console.log('Something went wrong:',err.message);
@@ -34,6 +37,8 @@ export class AuthService {
       .then(value => {
         //do the routing here
         console.log('Nice, it worked!');
+                this.router.navigateByUrl('/dashboard');
+
         errorMessage = "it worked!";
         // return errorMessage;
       })

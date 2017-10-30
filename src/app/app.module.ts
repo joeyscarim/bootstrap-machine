@@ -2,7 +2,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
-import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+// import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { FormsModule } from '@angular/forms';
 
 
@@ -15,6 +15,8 @@ import { MembersComponent } from './members/members.component';
 import { routes } from './app.routes';
 
 import { DragulaModule } from 'ng2-dragula/ng2-dragula';
+import { AngularFontAwesomeModule } from 'angular-font-awesome/angular-font-awesome';
+
 
 
 // export const firebaseConfig = {
@@ -33,6 +35,8 @@ import { AuthService } from './auth.service';
 import { HomeComponent } from './home/home.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { TemplateBuilderComponent } from './template-builder/template-builder.component';
+import { SidemenuComponent } from './sidemenu/sidemenu.component';
+import { DashboardResourcesComponent } from './dashboard-resources/dashboard-resources.component';
 
 @NgModule({
   declarations: [
@@ -43,16 +47,19 @@ import { TemplateBuilderComponent } from './template-builder/template-builder.co
     AppComponent,
     HomeComponent,
     DashboardComponent,
-    TemplateBuilderComponent
+    TemplateBuilderComponent,
+    SidemenuComponent,
+    DashboardResourcesComponent
   ],
   imports: [
     BrowserModule,
-    NgbModule.forRoot(),
+    // NgbModule,
      AngularFireModule.initializeApp(environment.firebase),
     AngularFireAuthModule,
     FormsModule,
     routes,
-    DragulaModule
+    DragulaModule,
+    AngularFontAwesomeModule
     // AngularFireModule.initializeApp(firebaseConfig)
   ],
   providers: [AuthService],
