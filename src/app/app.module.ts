@@ -39,6 +39,7 @@ import { TemplateBuilderComponent } from './template-builder/template-builder.co
 import { SidemenuComponent } from './sidemenu/sidemenu.component';
 import { DashboardResourcesComponent } from './dashboard-resources/dashboard-resources.component';
 import { ToastrModule } from 'ngx-toastr';
+import { NavbarComponent } from './navbar/navbar.component';
 
 @NgModule({
   declarations: [
@@ -51,7 +52,8 @@ import { ToastrModule } from 'ngx-toastr';
     DashboardComponent,
     TemplateBuilderComponent,
     SidemenuComponent,
-    DashboardResourcesComponent
+    DashboardResourcesComponent,
+    NavbarComponent
   ],
   imports: [
     BrowserModule,

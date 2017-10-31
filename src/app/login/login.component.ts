@@ -12,15 +12,14 @@ export class LoginComponent implements OnInit {
 
     email: string;
   password: string;
-  errorMessage: string = "no error yet...";
+  errorMessage = 'no error yet...';
 
-  constructor(public authService: AuthService,) { }
+  constructor(public authService: AuthService) { }
 
   ngOnInit() {
   }
 
-  login(){
-  	console.log("CLICKED!");
+  login() {
     this.authService.login(this.email, this.password, this.errorMessage);
     this.email = this.password = '';
   }
