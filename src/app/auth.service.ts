@@ -1,29 +1,79 @@
 import { Injectable } from '@angular/core';
 
 import { AngularFireAuth } from 'angularfire2/auth';
+// import { AngularFire } from 'angularfire2';
+
 import * as firebase from 'firebase/app';
+
+// import { AngularFireAuth, AngularFireDatabase, FirebaseAuthState, AuthProviders, AuthMethods, AngularFire } from "angularfire2";
 
 import { Observable } from 'rxjs/Observable';
 
-import {Router} from '@angular/router';
+import {CanActivate, Router} from '@angular/router';
 import { ToastrService } from 'ngx-toastr';
+
+// import { Injectable } from "@angular/core";
+// import { Observable } from "rxjs/Rx";
+// import 'rxjs/add/operator/do';
+// import 'rxjs/add/operator/map';
+// import 'rxjs/add/operator/take';
 
 
 @Injectable()
 export class AuthService {
+
   user: Observable<firebase.User>;
 
+  // authState: FirebaseAuthState = null;
+  
   constructor(private firebaseAuth: AngularFireAuth,  private router: Router, private toastr: ToastrService) {
     this.user = firebaseAuth.authState;
+
+    // firebaseAuth.auth.subscribe((auth) => {
+    //   this.authState = auth;
+    // });
   }
+
+  // canActivate(): Observable<boolean> {
+  //   return Observable.from(this.firebaseAuth)
+  //   .take(1)
+  //     .map(state => !!state)
+  //     .do(authenticated => {
+  //   if (!authenticated) {
+  //   this.router.navigate([ '/login' ]);
+  //   }
+  //   });
+  // }
+
+  // Returns true if user is logged in
+get authenticated(): boolean {
+  console.log("authenticating...." + this.firebaseAuth.authState);
+  return this.user !== null;
+  // return false;
+  // return this.user
+}
+
+get currentUserObservable(): any {
+  console.log("it's " + this.firebaseAuth.auth);
+  return this.firebaseAuth.auth;
+}
 
   signup(email: string, password: string) {
     this.firebaseAuth
       .auth
       .createUserWithEmailAndPassword(email, password)
-      .then(value => {
+      .then(user => {
         // console.log('Success!', value);
-                this.router.navigateByUrl('/dashboard');
+                // this.router.navigateByUrl('/dashboard');
+                if (user && user.emailVerified === false){
+                  user.sendEmailVerification().then(function(){
+                    console.log("email verification sent to user");
+                  });
+                }
+
+                  //send to signup page!
+                                // this.router.navigateByUrl('/dashboard');
+
 
       })
       .catch(err => {
@@ -34,6 +84,7 @@ export class AuthService {
       });    
   }
 
+  //TODO: check if verified in this method
   login(email: string, password: string, errorMessage: string) {
     this.firebaseAuth
       .auth

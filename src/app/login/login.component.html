@@ -1,12 +1,14 @@
   <section id="background">
+
+    <app-navbar></app-navbar>
   <div class="container">
 
 <div class="row">
 	<div class="col-md-4 m-auto">
       <!-- <form class="form-signin"> -->
-      	<div class="my-5 bg-light p-2 rounded">
-        <h3 class="form-signin-heading">Please sign in</h3>
-        
+      	<div class="my-5 bg-light p-3">
+        <h3 class="">Login</h3>
+        <hr>
         <label for="inputEmail" class="sr-only">Email address</label>
 <input type="email" [(ngModel)]="email" class="form-control mb-2" placeholder="email" required autofocus>
         
@@ -18,7 +20,8 @@
             <input type="checkbox" value="remember-me"> Remember me
           </label>
         </div> -->
-          <button class="btn btn-lg btn-primary btn-block"  (click)="login()" [disabled]="!email || !password">
+          <button class="btn btn-lg btn-primary btn-block" type="submit" (click)="login()" [disabled]="!email || !password" >
+              <!-- [disabled]="!email || !password" -->
     Login
   </button>
 </div>

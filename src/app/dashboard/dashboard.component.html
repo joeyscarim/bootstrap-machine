@@ -1,42 +1,19 @@
-  <!-- <header>
-      <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
-        <a class="navbar-brand" href="#">Bootstrap Machine</a>
-        <button class="navbar-toggler d-lg-none" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button> -->
-
-  <!--       <div class="collapse navbar-collapse" id="navbarsExampleDefault">
-          <ul class="navbar-nav mr-auto">
-            <li class="nav-item active">
-              <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Settings</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Profile</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Help</a>
-            </li>
-          </ul>
-          <form class="form-inline mt-2 mt-md-0">
-            <input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search">
-            <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-          </form>
-        </div> -->
-      <!-- </nav>
-    </header> -->
-    <app-navbar></app-navbar>
+ <app-navbar></app-navbar>
     
     <div class="container-fluid">
       <div class="row">
 <app-sidemenu></app-sidemenu>
-
-        <main role="main" class="col-sm-9 ml-sm-auto col-md-10 p-3">
-<!-- <br><br> -->
-          <h1>Welcome to Bootstrap Machine</h1>
+        <main role="main" class="col-sm-9 ml-sm-auto col-md-10 p-4">
+          <h1 class="display-5">Welcome,  {{ (authService.user | async)?.email }} !</h1>
           <hr>
+          <p class="lead">Thanks for being a beta tester! Bootstrap Machine is 100% free while we're in this phase so that 
+            we can get good feedback.
+          </p>
+          <p class="lead">Bootstrap Machine's goal is to be your one-stop shop for everything Bootstrap, including a drag and drop template
+            creator, premade templates for typical scenarios, and a resource hub full of the tools that we use in production for our day jobs- every single
+            day.
+          </p>
+          <div class="lead">Feel free to contact us anytime at builtbycobrella@gmail.com</div>
 
          
 

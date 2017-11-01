@@ -18,6 +18,8 @@ import { DragulaModule } from 'ng2-dragula/ng2-dragula';
 import { AngularFontAwesomeModule } from 'angular-font-awesome/angular-font-awesome';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
+import { AuthGuard} from './core/auth.guard';
+
 
 
 // export const firebaseConfig = {
@@ -40,6 +42,9 @@ import { SidemenuComponent } from './sidemenu/sidemenu.component';
 import { DashboardResourcesComponent } from './dashboard-resources/dashboard-resources.component';
 import { ToastrModule } from 'ngx-toastr';
 import { NavbarComponent } from './navbar/navbar.component';
+import { DashboardGalleryComponent } from './dashboard-gallery/dashboard-gallery.component';
+import { DashboardBuilderComponent } from './dashboard-builder/dashboard-builder.component';
+import { DashboardAccountComponent } from './dashboard-account/dashboard-account.component';
 
 @NgModule({
   declarations: [
@@ -53,7 +58,10 @@ import { NavbarComponent } from './navbar/navbar.component';
     TemplateBuilderComponent,
     SidemenuComponent,
     DashboardResourcesComponent,
-    NavbarComponent
+    NavbarComponent,
+    DashboardGalleryComponent,
+    DashboardBuilderComponent,
+    DashboardAccountComponent
   ],
   imports: [
     BrowserModule,
@@ -69,7 +77,7 @@ import { NavbarComponent } from './navbar/navbar.component';
 
     // AngularFireModule.initializeApp(firebaseConfig)
   ],
-  providers: [AuthService],
+  providers: [AuthService, AuthGuard],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

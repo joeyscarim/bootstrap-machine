@@ -4,7 +4,7 @@
 
 .sidebar {
   position: fixed;
-  top: 51px;
+  top: 56px;
   bottom: 0;
   left: 0;
   z-index: 1000;
@@ -28,4 +28,12 @@
 
 .sidebar .nav-link {
   border-radius: 0;
+}
+
+.nav-pills .nav-link.active, .show>.nav-pills .nav-link {
+  background-color: #526f83;
+}
+
+.nav-link {
+  color: #526f83;
 }
