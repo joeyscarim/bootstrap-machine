@@ -5,9 +5,11 @@ import { AuthService } from './../auth.service';
 import 'rxjs/add/operator/do';
 import 'rxjs/add/operator/map';
 import 'rxjs/add/operator/take';
+
 @Injectable()
 export class AuthGuard implements CanActivate {
   constructor(private auth: AuthService, private router: Router) {}
+
   canActivate(
     next: ActivatedRouteSnapshot,
     state: RouterStateSnapshot): Observable<boolean> | boolean {
@@ -17,7 +19,6 @@ export class AuthGuard implements CanActivate {
            .map(user => !!user)
            .do(loggedIn => {
              if (!loggedIn) {
-               console.log("access denied");
                this.router.navigate(['/login']);
              }
          });
