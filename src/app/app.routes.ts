@@ -18,15 +18,17 @@ import { AuthGuard } from './core/auth.guard';
 
 
 export const router: Routes = [
-    { path: '', redirectTo: 'home', pathMatch: 'full' },
-    { path: 'home', component: HomeComponent },
+    // { path: '', redirectTo: 'home', pathMatch: 'full' },
+    { path: '', component: HomeComponent },
+
+
     { path: 'dashboard', component: DashboardComponent, canActivate: [AuthGuard] },
-    { path: 'dashboard/resources', component: DashboardResourcesComponent },
-    { path: 'dashboard/builder', component: DashboardBuilderComponent },
-    { path: 'dashboard/gallery', component: DashboardGalleryComponent },
-    { path: 'dashboard/account', component: DashboardAccountComponent },
+    { path: 'dashboard/resources', component: DashboardResourcesComponent, canActivate: [AuthGuard] },
+    { path: 'dashboard/builder', component: DashboardBuilderComponent, canActivate: [AuthGuard] },
+    { path: 'dashboard/gallery', component: DashboardGalleryComponent, canActivate: [AuthGuard] },
+    { path: 'dashboard/account', component: DashboardAccountComponent, canActivate: [AuthGuard] },
     
-    { path: 'template-builder', component: TemplateBuilderComponent },
+    { path: 'template-builder', component: TemplateBuilderComponent, canActivate: [AuthGuard] },
     { path: 'login', component: LoginComponent },
     { path: 'signup', component: SignupComponent },
     { path: 'login-email', component: EmailComponent }

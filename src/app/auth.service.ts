@@ -1,7 +1,6 @@
 import { Injectable } from '@angular/core';
 
 import { AngularFireAuth } from 'angularfire2/auth';
-// import { AngularFire } from 'angularfire2';
 
 import * as firebase from 'firebase/app';
 
@@ -47,16 +46,21 @@ export class AuthService {
 
   // Returns true if user is logged in
 get authenticated(): boolean {
-  console.log("authenticating...." + this.firebaseAuth.authState);
-  return this.user !== null;
+  // console.log("authenticating...." + this.firebaseAuth.authState);
+  return this.firebaseAuth.auth.currentUser !== null;
   // return false;
   // return this.user
 }
 
 get currentUserObservable(): any {
   console.log("it's " + this.firebaseAuth.auth);
-  return this.firebaseAuth.auth;
+  return this.user;
+  // .auth;
 }
+
+// get verified(): boolean {
+//   return this.firebaseAuth.auth.emailVerified;
+// }
 
   signup(email: string, password: string) {
     this.firebaseAuth
@@ -68,11 +72,12 @@ get currentUserObservable(): any {
                 if (user && user.emailVerified === false){
                   user.sendEmailVerification().then(function(){
                     console.log("email verification sent to user");
+                    this.router.navigateByUrl('/dashboard');
+
                   });
                 }
 
                   //send to signup page!
-                                // this.router.navigateByUrl('/dashboard');
 
 
       })
