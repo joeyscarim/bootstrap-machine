@@ -6,14 +6,24 @@
         <main role="main" class="col-sm-9 ml-sm-auto col-md-10 p-4">
           <h1 class="display-5">Welcome,  {{ (authService.user | async)?.email }} !</h1>
           <hr>
-          <p class="lead">Thanks for being a beta tester! Bootstrap Machine is 100% free while we're in this phase so that 
-            we can get good feedback.
+          <p class="lead">Thanks for being a <strong>beta tester!</strong> Bootstrap Machine is 100% free while we're in this phase so that 
+            we can get good feedback and grow.
           </p>
-          <p class="lead">Bootstrap Machine's goal is to be your one-stop shop for everything Bootstrap, including a drag and drop template
+          <p>In the future, Bootstrap Machine plans to have a forever free account and an option to pay a small monthly fee for premium features as well. Our goal is to help peeople use Bootstrap to create better templates, from hobbyist to full time developers..</p>
+          <p >Bootstrap Machine's goal is to be your one-stop shop for everything Bootstrap, including a drag and drop template
             creator, premade templates for typical scenarios, and a resource hub full of the tools that we use in production for our day jobs- every single
             day.
           </p>
-          <div class="lead">Feel free to contact us anytime at builtbycobrella@gmail.com</div>
+          <p >Contact us anytime at <a href="mailto:builtbycobrella@gmail.com">BuiltByCobrella@gmail.com</a></p>
+
+          <hr>
+          <p class="lead">
+          Changelog:</p>
+          <ul class="bg-dark text-light py-3">
+              <li>11/02/17: Added <u><a class="text-light" href="/dashboard/resources">resources section</a></u> with first 5 resources.</li>
+              <li>10/31/17: User system, dashboard, and initial paging complete.</li>              
+          <li>10/24/17: Site officially launched. </li>
+        </ul>
 
          
 
