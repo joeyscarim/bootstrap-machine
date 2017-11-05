@@ -1,20 +1,24 @@
 import { ModuleWithProviders } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-
 import { AppComponent } from './../app.component';
-import { LoginComponent } from './../login/login.component';
-import { HomeComponent } from './../home/home.component';
-import { TemplateBuilderComponent } from './../template-builder/template-builder.component';
 
-// dashboard components
+// public
+import { LoginComponent } from './../public/login/login.component';
+import { HomeComponent } from './../public/home/home.component';
+import { SignupComponent } from './../public/signup/signup.component';
+
+// core
+import { AuthGuard } from './auth.guard';
+
+// dashboard 
 import { DashboardHomeComponent } from './../dashboard/dashboard-home/dashboard-home.component';
 import {DashboardResourcesComponent} from './../dashboard/dashboard-resources/dashboard-resources.component';
 import {DashboardBuilderComponent} from './../dashboard/dashboard-builder/dashboard-builder.component';
 import {DashboardGalleryComponent} from './../dashboard/dashboard-gallery/dashboard-gallery.component';
 import {DashboardAccountComponent} from './../dashboard/dashboard-account/dashboard-account.component';
 
-import { SignupComponent } from './../signup/signup.component';
-import { AuthGuard } from './auth.guard';
+import { TemplateBuilderComponent } from './../template-builder/template-builder.component';
+
 
 export const router: Routes = [
     // public routes
