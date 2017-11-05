@@ -30,6 +30,10 @@ export const router: Routes = [
     // garbage routes
     { path: 'template-builder', component: TemplateBuilderComponent, canActivate: [AuthGuard] },
     { path: 'login-email', component: EmailComponent }
+    // ,
+
+    // { path: 'gallery/01-launchpad', component: EmailComponent },
+    
 ];
 
 export const routes: ModuleWithProviders = RouterModule.forRoot(router);
