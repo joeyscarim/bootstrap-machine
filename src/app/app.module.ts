@@ -22,7 +22,7 @@ import { environment } from '../environments/environment';
 import { AngularFireAuthModule } from 'angularfire2/auth';
 import { ToastrModule } from 'ngx-toastr';
 
-//partials
+// partials
 import { SidemenuComponent } from './partials/sidemenu/sidemenu.component';
 import { NavbarComponent } from './partials/navbar/navbar.component';
 
@@ -32,8 +32,7 @@ import {DashboardResourcesComponent} from './dashboard/dashboard-resources/dashb
 import {DashboardBuilderComponent} from './dashboard/dashboard-builder/dashboard-builder.component';
 import {DashboardGalleryComponent} from './dashboard/dashboard-gallery/dashboard-gallery.component';
 import {DashboardAccountComponent} from './dashboard/dashboard-account/dashboard-account.component';
-
-import { TemplateBuilderComponent } from './template-builder/template-builder.component';
+import {DashboardBuilderEditComponent} from './dashboard/builder-edit/builder-edit.component';
 
 @NgModule({
   declarations: [
@@ -42,7 +41,7 @@ import { TemplateBuilderComponent } from './template-builder/template-builder.co
     AppComponent,
     HomeComponent,
     DashboardHomeComponent,
-    TemplateBuilderComponent,
+    DashboardBuilderEditComponent,
     SidemenuComponent,
     DashboardResourcesComponent,
     NavbarComponent,

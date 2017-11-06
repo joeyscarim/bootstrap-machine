@@ -2,11 +2,11 @@ import { Component, OnInit } from '@angular/core';
 import { DragulaService } from 'ng2-dragula/ng2-dragula';
 
 @Component({
-  selector: 'app-template-builder',
-  templateUrl: './template-builder.component.html',
-  styleUrls: ['./template-builder.component.css']
+  selector: 'app-dashboard-builder-edit',
+  templateUrl: './builder-edit.component.html',
+  styleUrls: ['./builder-edit.component.css']
 })
-export class TemplateBuilderComponent implements OnInit {
+export class DashboardBuilderEditComponent implements OnInit {
 
 //   constructor() { }
 
