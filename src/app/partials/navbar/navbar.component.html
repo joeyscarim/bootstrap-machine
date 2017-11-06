@@ -16,6 +16,17 @@
     </ul>
   </div>
 
+  <div *ngIf="(authService.user | async)" id="navbarNavDropdown" class="navbar-collapse collapse">
+    <ul class="navbar-nav ml-auto">
+      <li class="nav-item">
+        <a class="nav-link text-light" routerLink="/dashboard">Dashboard</a>
+      </li>
+      <!-- <li class="nav-item">
+        <a routerLink="/signup" class="btn btn-light">Join Free</a>
+      </li> -->
+    </ul>
+  </div>
+
 <!-- <p class="ml-auto text-light" *ngIf="authService.user | async">Welcome {{ (authService.user | async)?.email }}!</p> -->
 </nav>
 </header>

@@ -6,6 +6,8 @@ import { FormsModule } from '@angular/forms';
 // public
 import { LoginComponent } from './public/login/login.component';
 import { SignupComponent } from './public/signup/signup.component';
+import { SignupThanksComponent } from './public/signup-thanks/signup-thanks.component';
+
 import { HomeComponent } from './public/home/home.component';
 
 // core
@@ -43,6 +45,7 @@ import {DashboardBuilderEditComponent} from './dashboard/builder-edit/builder-ed
     DashboardHomeComponent,
     DashboardBuilderEditComponent,
     SidemenuComponent,
+    SignupThanksComponent,
     DashboardResourcesComponent,
     NavbarComponent,
     DashboardGalleryComponent,

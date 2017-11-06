@@ -6,6 +6,7 @@ import { AppComponent } from './../app.component';
 import { LoginComponent } from './../public/login/login.component';
 import { HomeComponent } from './../public/home/home.component';
 import { SignupComponent } from './../public/signup/signup.component';
+import { SignupThanksComponent } from './../public/signup-thanks/signup-thanks.component';
 
 // core
 import { AuthGuard } from './auth.guard';
@@ -24,6 +25,8 @@ export const router: Routes = [
     { path: '', component: HomeComponent },
     { path: 'login', component: LoginComponent },
     { path: 'signup', component: SignupComponent },
+    { path: 'signup-thanks', component: SignupThanksComponent },
+    
     // dashboard routes
     { path: 'dashboard', component: DashboardHomeComponent, canActivate: [AuthGuard] },
     { path: 'dashboard/resources', component: DashboardResourcesComponent, canActivate: [AuthGuard] },

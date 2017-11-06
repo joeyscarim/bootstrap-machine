@@ -14,9 +14,12 @@ export class LoginComponent implements OnInit {
   password: string;
   errorMessage = 'no error yet...';
 
-  constructor(public authService: AuthService) { }
+  constructor(public authService: AuthService, private router: Router) { }
 
   ngOnInit() {
+    if (this.authService.user) {
+      this.router.navigateByUrl('/dashboard');
+    }
   }
 
   login() {
