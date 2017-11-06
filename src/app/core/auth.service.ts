@@ -9,14 +9,16 @@ import { ToastrService } from 'ngx-toastr';
 export class AuthService {
 
   user: Observable<firebase.User>;
+  currentUser: any;
 
   constructor(private firebaseAuth: AngularFireAuth,  private router: Router, private toastr: ToastrService) {
     this.user = firebaseAuth.authState;
+    this.currentUser = firebaseAuth.auth.currentUser;
   }
 
   // Returns true if user is logged in
 get authenticated(): boolean {
-  return this.firebaseAuth.auth.currentUser !== null;
+  return this.currentUser !== null;
 }
 
 get currentUserObservable(): any {
@@ -48,7 +50,6 @@ get currentUserObservable(): any {
       });
   }
 
-  // TODO: check if verified in this method
   login(email: string, password: string, errorMessage: string) {
     this.firebaseAuth
       .auth
@@ -69,6 +70,20 @@ get currentUserObservable(): any {
       .catch(err => {
             this.toastr.error(err.message, 'Error!');
       });
+  }
+
+  updatePassword(newPassword: string, newPasswordAgain: string) {
+    if (newPassword === newPasswordAgain) {
+    this.currentUser.updatePassword(newPassword).then(value => {
+      // Update successful.
+      this.toastr.success('Password updated!', 'Success!');
+    }).catch(err => {
+      // An error happened.
+      this.toastr.error(err.message, 'Error!');
+    });
+  }else {
+    this.toastr.error('Passwords don\'t match!', 'Error!');
+  }
   }
 
   logout() {
