@@ -15,9 +15,9 @@ export class SignupComponent implements OnInit {
   constructor(public authService: AuthService, public router: Router) { }
 
   ngOnInit() {
-    if (this.authService.user) {
-      this.router.navigateByUrl('/dashboard');
-    }
+    // if (this.authService.user) {
+    //   this.router.navigateByUrl('/dashboard');
+    // }
   }
 
     signup() {
