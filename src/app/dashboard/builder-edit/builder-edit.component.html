@@ -1,48 +1,98 @@
-<!-- <ul [dragula]='"bag-items"' [dragulaModel]='items'>
-  <li *ngFor="let item of items">{{item}}</li>
-</ul>
+  <app-navbar></app-navbar>
 
-<ul [dragula]='"bag-people"' [dragulaModel]='people'>
-  <li *ngFor="let person of people">{{person}}</li>
-</ul>
-
-
-
-{{msg}}
-
-
-<div>
-    <div class='wrapper'>
-      <div class='container' [dragula]='"first-bag"'>
-        <div>You can move these elements between these two containers</div>
-        <div>Moving them anywhere else isn't quite possible</div>
-        <div>There's also the possibility of moving elements around in the same container, changing their position</div>
-      </div>
-      <div class='container' [dragula]='"first-bag"'>
-        <div>This is the default use case. You only need to specify the containers you want to use</div>
-        <div>More interactive use cases lie ahead</div>
-        <div>Make sure to check out the <a href='https://github.com/bevacqua/dragula#readme'>documentation on GitHub!</a></div>
-      </div>
-    </div>
-  </div> -->
-
-  <div class="container-fluid">
+  <div class="container-fluid" style="margin-top:56px">
   	<div class="row">
 	<div class="col-md-4 bg-light">
+
+    <p>Choose a category and then drag elements from here to the right side. When you're happy with your template, press "export" to save it.</p>
  <div  [dragula]='"first-bag"'>
-        <div>Navbar A</div>
-        <div>Navbar B</div>
-        <div>Navbar C</div>
+
+  <div>
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-dark bg-faded" style="background-color: #dc3545;">
+          <a class="navbar-brand" href="#">Bootstrap <strong>Machine</strong></a>
+          
+          <button  class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div  class="navbar-collapse collapse">
+            <ul class="navbar-nav ml-auto">
+              <li class="nav-item">
+                <a class="nav-link text-light" routerLink="/login">Login</a>
+              </li>
+              <li class="nav-item">
+                <a routerLink="/signup" class="btn btn-light">Join Free</a>
+              </li>
+            </ul>
+          </div>
+        
+          
+        <!-- <p class="ml-auto text-light" *ngIf="authService.user | async">Welcome {{ (authService.user | async)?.email }}!</p> -->
+        </nav>
+        </header>
+  <div>
+
+
+  </div>
+  </div> 
+        <div>
+          <div class="container">
+          <div class="row">
+            <div class="col-md-4 bg-primary">A</div>
+            <div class="col-md-4 bg-dark">B</div>
+            <div class="col-md-4 bg-sucess">c</div>
+          </div>
+          </div>
+
+
+        </div>
+        <div>
+            <nav class="navbar navbar-toggleable-md navbar-light bg-faded">
+                <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                  <span class="navbar-toggler-icon"></span>
+                </button>
+                <a class="navbar-brand" href="#">Navbar</a>
+              
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                  <ul class="navbar-nav mr-auto">
+                    <li class="nav-item active">
+                      <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="#">Link</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link disabled" href="#">Disabled</a>
+                    </li>
+                  </ul>
+                  <form class="form-inline my-2 my-lg-0">
+                    <input class="form-control mr-sm-2" type="text" placeholder="Search">
+                    <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+                  </form>
+                </div>
+              </nav>
+              
+
+        </div>
+        <section id="section-footer">
+            <div class="container">
+              <!-- <div class="row"> -->
+                <p class="text-center text-light p-4 mb-0">Bootstrap Machine. 2018.</p>
+              <!-- </div> -->
+            </div>
+          </section>
       </div>
 	</div>
 
 
-	<div class="col-md-8 bg-primary">
- <div  [dragula]='"first-bag"'>
+	<div class="col-md-8 bg-dark">
+ <div style="    height: -webkit-fill-available;" class="bg-light mx-1 my-3" [dragula]='"first-bag"'>
         <div>Top of page</div>
       </div>
 	</div>
 
-  	</div>
+    </div>
+    <div>
+    </div>
 
   </div>
