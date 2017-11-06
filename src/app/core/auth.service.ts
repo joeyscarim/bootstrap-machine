@@ -86,6 +86,20 @@ get currentUserObservable(): any {
   }
   }
 
+  sendForgotPasswordEmail(email: string) { 
+    // var auth = firebase.auth();
+    // var emailAddress = "user@example.com";
+
+    this.firebaseAuth
+    .auth.sendPasswordResetEmail(email).then(value => {
+      // Email sent.
+      this.toastr.success('Password reset email sent!', 'Success!');
+    }).catch(err => {
+      // An error happened.
+      this.toastr.error(err.message, 'Error!');
+    });
+  }
+
   logout() {
     this.firebaseAuth
       .auth
