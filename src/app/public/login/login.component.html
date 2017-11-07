@@ -9,24 +9,71 @@
       	<div class="my-5 bg-light p-3">
         <h3 class="">Login</h3>
         <hr>
-        <label for="inputEmail" class="sr-only">Email address</label>
-<input type="email" [(ngModel)]="email" class="form-control mb-2" placeholder="email" required autofocus>
+
+              <!-- <form class="form-signin"> -->
+                  <form #formData='ngForm' (ngSubmit)="onSubmit()">
+                      <label for="inputEmail" class="sr-only">Email address</label>
+<input type="email" [(ngModel)]="email" name="email" class="form-control mb-2" placeholder="email" required autofocus>
         
         <label for="inputPassword" class="sr-only">Password</label>
-          <input type="password" [(ngModel)]="password" class="form-control mb-2" placeholder="Password" required>
+          <input type="password" [(ngModel)]="password" name="password" class="form-control mb-2" placeholder="Password" required>
 
-        <!-- <div class="checkbox">
-          <label>
-            <input type="checkbox" value="remember-me"> Remember me
-          </label>
-        </div> -->
-          <button class="btn btn-lg btn-primary btn-block" type="submit" (click)="login()" [disabled]="!email || !password" >
-              <!-- [disabled]="!email || !password" -->
+       
+          <button class="btn btn-lg btn-primary btn-block" type="submit"  >
     Login
   </button>
+        </form>
+
+        <!-- [disabled]="!email || !password" -->
+
+        <!-- <form #UserLogin="ngForm" (ngSubmit)="onSubmit(UserLogin)">
+            <md-input-container>
+                <input mdInput [(ngModel)]="data.email" name="email" placeholder="Benutzername" class="form-control"  type="text" required>
+            </md-input-container>
+            
+            <md-input-container>
+                <input mdInput [(ngModel)]="data.password" name="password" class="form-control" placeholder="Passwort" type="password" required>
+            </md-input-container>
+            
+            <button md-button class="submit-btn" type="button" [disabled]="!UserLogin.form.valid">Login!</button>
+            </form> -->
+
+        <!-- <form #formData='ngForm' (ngSubmit)="onSubmit(formData)">
+            
+                  <input type="text" placeholder="Email address.." (ngModel)="email" name="email" class="txt" required>
+                  <input type="password" placeholder="Password" (ngModel)="password" name="password" class="txt" required>
+            
+                  <button type="submit" [disabled]="!formData.valid" class="basic-btn">Log in</button>
+                  <a routerLink="/signup" class="alc">Don't have an account?</a>
+              </form> -->
+
+        <!-- <form #formData='ngForm' (ngSubmit)="onSubmit(formData)">
+            
+                <input type="text" placeholder="Email address.." (ngModel)="email" name="email" class="txt" required>
+                <input type="password" placeholder="Password" (ngModel)="password" name="password" class="txt" required>
+            
+            
+                <button type="submit" [disabled]="!formData.valid" class="basic-btn">Create my account</button>
+              </form> -->
+
+              <!-- <form #formData='ngForm' (ngSubmit)="onSubmit(formData)">
+                  
+                        <input type="text" placeholder="Email address.." (ngModel)="email" name="email" class="txt" required>
+                        <input type="password" placeholder="Password" (ngModel)="password" name="password" class="txt" required>
+                  
+                        <button type="submit" [disabled]="!formData.valid" class="basic-btn">Log in</button>
+                        <a routerLink="/signup" class="alc">Don't have an account?</a>
+                    </form> -->
+
+        <hr>
+        <!-- forgot password? -->
+        <a routerLink="/signup" class="text-center">Forgot password?</a>
+        
+
 </div>
 <footer class="text-light text-center">Boostrap Machine. 2018.</footer>
-      <!-- </form> -->
+
+
 
 <!-- {{errorMessage}} -->
     </div>

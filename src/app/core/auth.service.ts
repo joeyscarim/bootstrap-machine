@@ -10,6 +10,8 @@ export class AuthService {
 
   user: Observable<firebase.User>;
   currentUser: any;
+// currentUserInstant: any;
+// quickCheck = 'MEOW';
 
   constructor(private firebaseAuth: AngularFireAuth,  private router: Router, private toastr: ToastrService) {
     this.user = firebaseAuth.authState;
@@ -25,6 +27,19 @@ get currentUserObservable(): any {
   return this.user;
 }
 
+getCurrentUser(): any{
+  this.firebaseAuth.auth.onAuthStateChanged(user => {
+    if (user) {
+      console.log(user);
+      // User is signed in.
+      return "found em";
+    } else {
+      console.log("NOT FOUND");
+      // No user is signed in.
+      return "error";
+    }
+  });
+}
   signup(email: string, password: string) {
     this.firebaseAuth
       .auth
@@ -57,11 +72,13 @@ get currentUserObservable(): any {
       .then(user => {
 
         if (user && user.emailVerified === true) {
+          // this.currentUserInstant = true;
         this.router.navigateByUrl('/dashboard');
         } else {
           this.firebaseAuth
           .auth
           .signOut();
+
           // send a new verification email
           user.sendEmailVerification();
           this.toastr.error('Email not verified! Please check your inbox!', 'Error!');
@@ -86,7 +103,7 @@ get currentUserObservable(): any {
   }
   }
 
-  sendForgotPasswordEmail(email: string) { 
+  sendForgotPasswordEmail(email: string) {
     // var auth = firebase.auth();
     // var emailAddress = "user@example.com";
 
