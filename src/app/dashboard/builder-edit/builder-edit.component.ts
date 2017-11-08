@@ -53,6 +53,8 @@ string: string;
 
     // private dragulaService: DragulaService
     dragula.setOptions('first-bag', {
+      removeOnSpill: true,
+      
       // copy: true,
       // copySortSource: true,
       copy: function (el, source) {
