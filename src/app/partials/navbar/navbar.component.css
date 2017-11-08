@@ -1,3 +1,9 @@
 .navbar-brand {
     font-weight: 200;
 }
+
+.btn-primary {
+    color: #fff;
+    background-color: #16a085;
+    border-color:#16a085;
+}

@@ -76,6 +76,13 @@ string: string;
 
   }
 
+  updateString() {
+    const elem: Element = document.getElementById("right");
+    this.string = elem.innerHTML.toString();
+    // string.replace('_ngcontent-c1', '');
+    this.string = this.string.replace(/_ngcontent-c1=""/g, '');
+  }
+
   exportCode() {
     // console.log("the code!" + this.div);
     const elem: Element = document.getElementById("right");
