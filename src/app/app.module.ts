@@ -6,7 +6,12 @@ import { FormsModule } from '@angular/forms';
 // public
 import { LoginComponent } from './public/login/login.component';
 import { SignupComponent } from './public/signup/signup.component';
+import { ForgotPasswordComponent } from './public/forgot-password/forgot-password.component';
 import { SignupThanksComponent } from './public/signup-thanks/signup-thanks.component';
+
+// gallery
+import { Template01Component } from './gallery/01-Launchpad/template01.component';
+
 
 import { HomeComponent } from './public/home/home.component';
 
@@ -45,12 +50,14 @@ import {DashboardBuilderEditComponent} from './dashboard/builder-edit/builder-ed
     DashboardHomeComponent,
     DashboardBuilderEditComponent,
     SidemenuComponent,
+    ForgotPasswordComponent,
     SignupThanksComponent,
     DashboardResourcesComponent,
     NavbarComponent,
     DashboardGalleryComponent,
     DashboardBuilderComponent,
-    DashboardAccountComponent
+    DashboardAccountComponent,
+    Template01Component
   ],
   imports: [
     BrowserModule,

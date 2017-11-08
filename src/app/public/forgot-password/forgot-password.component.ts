@@ -4,14 +4,13 @@ import { AuthService } from '../../core/auth.service';
 import { AngularFireAuth } from 'angularfire2/auth';
 
 @Component({
-  selector: 'app-login',
-  templateUrl: './login.component.html',
-  styleUrls: ['./login.component.css']
+  selector: 'app-forgot-password',
+  templateUrl: './forgot-password.component.html',
+  styleUrls: ['./forgot-password.component.css']
 })
-export class LoginComponent implements OnInit {
+export class ForgotPasswordComponent implements OnInit {
 
   email: string;
-  password: string;
 
   constructor(private firebaseAuth: AngularFireAuth, public authService: AuthService, private router: Router) {
     this.firebaseAuth.auth.onAuthStateChanged(user => {
@@ -24,8 +23,8 @@ export class LoginComponent implements OnInit {
   ngOnInit() {}
 
   onSubmit() {
-    this.authService.login(this.email, this.password);
-    this.password = '';
+    this.authService.sendForgotPasswordEmail(this.email);
+    this.email = '';
     }
 
 }

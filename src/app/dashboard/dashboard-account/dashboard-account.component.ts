@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { AuthService } from '../../core/auth.service';
 
 @Component({
   selector: 'app-dashboard-account',
@@ -7,9 +8,17 @@ import { Component, OnInit } from '@angular/core';
 })
 export class DashboardAccountComponent implements OnInit {
 
-  constructor() { }
+  newPassword: string;
+  newPasswordAgain: string;
+
+  constructor(private authService: AuthService) { }
 
   ngOnInit() {
+  }
+
+  updatePassword() {
+    this.authService.updatePassword(this.newPassword, this.newPasswordAgain);
+    this.newPassword = this.newPasswordAgain = '';
   }
 
 }

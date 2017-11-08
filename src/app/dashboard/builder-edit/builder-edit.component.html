@@ -3,9 +3,9 @@
   <div class="container-fluid" style="margin-top:56px">
   	<div class="row">
 	<div class="col-md-4 bg-light">
-
+    <button (click)="exportCode()">Export</button>
     <p>Choose a category and then drag elements from here to the right side. When you're happy with your template, press "export" to save it.</p>
- <div  [dragula]='"first-bag"'>
+ <div  [dragula]='"first-bag"' id='left'>
 
   <div>
     <header>
@@ -86,8 +86,8 @@
 
 
 	<div class="col-md-8 bg-dark">
- <div style="    height: -webkit-fill-available;" class="bg-light mx-1 my-3" [dragula]='"first-bag"'>
-        <div>Top of page</div>
+ <div style="    height: -webkit-fill-available;" class="bg-light mx-1 my-3" [dragula]='"first-bag"' id='right' >
+        <!-- <div>Top of page</div> -->
       </div>
 	</div>
 

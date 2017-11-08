@@ -40,46 +40,25 @@ getCurrentUser(): any{
     }
   });
 }
+
+  // signup a new user. this calls login automatically
   signup(email: string, password: string) {
-    this.firebaseAuth
-      .auth
-      .createUserWithEmailAndPassword(email, password)
-      .then(user => {
-                if (user && user.emailVerified === false) {
-                  user.sendEmailVerification().then(value => {
-
-                      // this is still logging the user in.... how do i stop that?
-                    // send them to the confirm email page instead!
-                    this.firebaseAuth
-                    .auth
-                    .signOut();
-                    this.router.navigateByUrl('/signup-thanks');
-                    // add some confetti to this page !
-                    // signup-confirmed
-
-                  });
-                }
-      })
-      .catch(err => {
-            this.toastr.error(err.message, 'Error!');
-      });
+    this.firebaseAuth.auth.createUserWithEmailAndPassword(email, password).then(user => {
+      this.firebaseAuth.auth.signOut();
+      user.sendEmailVerification();
+      this.router.navigateByUrl('/signup-thanks');
+    }).catch(err => {
+      this.toastr.error(err.message, 'Error!');
+    });
   }
 
-  login(email: string, password: string, errorMessage: string) {
-    this.firebaseAuth
-      .auth
-      .signInWithEmailAndPassword(email, password)
-      .then(user => {
-
+  // login
+  login(email: string, password: string) {
+    this.firebaseAuth.auth.signInWithEmailAndPassword(email, password).then(user => {
         if (user && user.emailVerified === true) {
-          // this.currentUserInstant = true;
         this.router.navigateByUrl('/dashboard');
         } else {
-          this.firebaseAuth
-          .auth
-          .signOut();
-
-          // send a new verification email
+          this.firebaseAuth.auth.signOut();
           user.sendEmailVerification();
           this.toastr.error('Email not verified! Please check your inbox!', 'Error!');
         }
@@ -91,7 +70,7 @@ getCurrentUser(): any{
 
   updatePassword(newPassword: string, newPasswordAgain: string) {
     if (newPassword === newPasswordAgain) {
-    this.currentUser.updatePassword(newPassword).then(value => {
+    this.firebaseAuth.auth.currentUser.updatePassword(newPassword).then(value => {
       // Update successful.
       this.toastr.success('Password updated!', 'Success!');
     }).catch(err => {
@@ -102,6 +81,8 @@ getCurrentUser(): any{
     this.toastr.error('Passwords don\'t match!', 'Error!');
   }
   }
+
+
 
   sendForgotPasswordEmail(email: string) {
     // var auth = firebase.auth();

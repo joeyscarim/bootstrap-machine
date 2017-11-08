@@ -14,7 +14,18 @@
       <hr>
       <div class="row mb-4">
         <div class="col-md-12">
-        <p>Coming soon.</p>
+            <form #formData='ngForm' (ngSubmit)="updatePassword()">
+                
+                <label for="inputPassword" class="sr-only">New Password</label>
+                <input type="password" [(ngModel)]="newPassword" name="newPassword" class="form-control mb-2" placeholder="Password" required>
+                
+                <label for="inputPassword" class="sr-only">New Password Again</label>
+                <input type="password" [(ngModel)]="newPasswordAgain" name="newPasswordAgain" class="form-control mb-2" placeholder="Password Again" required>
+
+                <button class="btn btn-lg btn-primary btn-block" type="submit">
+                    Update Password
+                </button>
+            </form>
       </div>
       </div>
 
