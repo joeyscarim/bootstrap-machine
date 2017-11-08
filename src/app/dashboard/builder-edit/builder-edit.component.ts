@@ -9,7 +9,7 @@ import { DragulaService } from 'ng2-dragula/ng2-dragula';
 export class DashboardBuilderEditComponent implements OnInit {
 
   // @ViewChild('right') code;
-
+string: string;
   // testhtml: any;
   // @ViewChild('#testhtml') div: ElementRef;
 
@@ -77,8 +77,12 @@ export class DashboardBuilderEditComponent implements OnInit {
   exportCode() {
     // console.log("the code!" + this.div);
     const elem: Element = document.getElementById("right");
-    alert(elem);
-    console.log(elem);
+    this.string = elem.innerHTML.toString();
+    // string.replace('_ngcontent-c1', '');
+    this.string = this.string.replace(/_ngcontent-c1=""/g, '');
+    alert(this.string);
+    // alert((elem.innerHTML).replace('_ngcontent-c1=\"\"', ''));
+    console.log("a ok " + elem.innerHTML);
     
     
   }
