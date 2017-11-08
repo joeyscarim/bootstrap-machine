@@ -1,62 +1,25 @@
-.jumbo-b{
-	background-color:#dceaf3;
-}
-
-	#section-jumbotron{
-		    background-color: #5185a9;
-    background-image: url('/assets/img/dark-geometric.png');
-
-	}
-
-	#section-cogs{
-		/* background-color: #5185a9; */
-background-image: url('/assets/img/background-cogs.jpg');
-background-size: cover;
-
+#section-cogs {
+	background-image: url('/assets/img/background-cogs.jpg');
+	background-size: cover;
 }
 
 .jumbotron {
-  
-    background-color: none;
-    /* border-radius: .3rem; */
+	background-color: none;
 }
 
-	#section-cta{
-		background-color:#B1DDF8;
-	
-	}
+#section-footer {
+	background-color: #526f83;
+}
 
-	#section-footer{
-				    background-color: #526f83;
+.btn-primary {
+	color: #fff;
+	background-color: #16a085;
+	border-color: #16a085;
+	border-radius: 0px;
+}
 
-	}
-
-	.step-icon{
-		    color: #dc3646;
-    font-size: 2.5rem;
-	}
-
-
-	.btn-primary {
-		color: #fff;
-		background-color: #16a085;
-		border-color:#16a085;
-	}
-
-	.white-link{
-		color:white;
-		text-decoration: underline;
-	}
-
-	hr {
-		margin-top: 1rem;
-		margin-bottom: 1rem;
-		border: 0;
-		border-top: 1px solid #1ba085;
-	}
-
-	.list-unstyled {
-		padding-left: 0;
-		list-style: none;
-		font-size: 15px;
-	}
+@media (max-width: 768px) {
+h1{
+	font-size:2.5rem;
+}
+}

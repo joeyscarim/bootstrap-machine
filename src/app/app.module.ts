@@ -32,6 +32,7 @@ import { ToastrModule } from 'ngx-toastr';
 // partials
 import { SidemenuComponent } from './partials/sidemenu/sidemenu.component';
 import { NavbarComponent } from './partials/navbar/navbar.component';
+import { FooterComponent } from './partials/footer/footer.component';
 
 // dashboard components
 import { DashboardHomeComponent } from './dashboard/dashboard-home/dashboard-home.component';
@@ -57,7 +58,8 @@ import {DashboardBuilderEditComponent} from './dashboard/builder-edit/builder-ed
     DashboardGalleryComponent,
     DashboardBuilderComponent,
     DashboardAccountComponent,
-    Template01Component
+    Template01Component,
+    FooterComponent
   ],
   imports: [
     BrowserModule,
