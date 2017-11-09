@@ -1,0 +1,25 @@
+#section-cogs {
+	background-image: url('/assets/img/background-cogs.jpg');
+	background-size: cover;
+}
+
+.jumbotron {
+	background-color: none;
+}
+
+#section-footer {
+	background-color: #526f83;
+}
+
+.btn-primary {
+	color: #fff;
+	background-color: #16a085;
+	border-color: #16a085;
+	border-radius: 0px;
+}
+
+@media (max-width: 768px) {
+h1{
+	font-size:2.5rem;
+}
+}

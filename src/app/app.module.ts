@@ -8,6 +8,10 @@ import { LoginComponent } from './public/login/login.component';
 import { SignupComponent } from './public/signup/signup.component';
 import { ForgotPasswordComponent } from './public/forgot-password/forgot-password.component';
 import { SignupThanksComponent } from './public/signup-thanks/signup-thanks.component';
+import { UsageRulesComponent } from './public/usage-rules/usage-rules.component';
+import { PrivacyPolicyComponent } from './public/privacy-policy/privacy-policy.component';
+import { TermsAndConditionsComponent } from './public/terms-and-conditions/terms-and-conditions.component';
+import { PageNotFoundComponent } from './public/page-not-found/page-not-found.component';
 
 // gallery
 import { Template01Component } from './gallery/01-Launchpad/template01.component';
@@ -59,7 +63,11 @@ import {DashboardBuilderEditComponent} from './dashboard/builder-edit/builder-ed
     DashboardBuilderComponent,
     DashboardAccountComponent,
     Template01Component,
-    FooterComponent
+    FooterComponent,
+    UsageRulesComponent,
+    PrivacyPolicyComponent,
+    TermsAndConditionsComponent,
+    PageNotFoundComponent
   ],
   imports: [
     BrowserModule,

@@ -8,6 +8,10 @@ import { HomeComponent } from './../public/home/home.component';
 import { SignupComponent } from './../public/signup/signup.component';
 import { SignupThanksComponent } from './../public/signup-thanks/signup-thanks.component';
 import { ForgotPasswordComponent } from './../public/forgot-password/forgot-password.component';
+import { UsageRulesComponent } from './../public/usage-rules/usage-rules.component';
+import { PrivacyPolicyComponent } from './../public/privacy-policy/privacy-policy.component';
+import { TermsAndConditionsComponent } from './../public/terms-and-conditions/terms-and-conditions.component';
+import { PageNotFoundComponent } from './../public/page-not-found/page-not-found.component';
 
 // gallary
 import { Template01Component } from './../gallery/01-Launchpad/template01.component';
@@ -31,6 +35,9 @@ export const router: Routes = [
     { path: 'signup', component: SignupComponent },
     { path: 'signup-thanks', component: SignupThanksComponent },
     { path: 'forgot-password', component: ForgotPasswordComponent },
+    { path: 'usage-license', component: UsageRulesComponent },
+    { path: 'privacy-policy', component: PrivacyPolicyComponent },
+    { path: 'terms-and-conditions', component: TermsAndConditionsComponent },
 
     // gallery
     { path: 'gallery/01-launchpad', component: Template01Component },
@@ -44,7 +51,7 @@ export const router: Routes = [
     { path: 'dashboard/builder-edit', component: DashboardBuilderEditComponent, canActivate: [AuthGuard] },
 
     // 404
-    {path: '404', component: HomeComponent},
+    {path: '404', component: PageNotFoundComponent},
     {path: '**', redirectTo: '/404'}
 ];
 
