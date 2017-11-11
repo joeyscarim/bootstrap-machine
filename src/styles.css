@@ -10,6 +10,7 @@ body{
     background-color: #16a085;
     border-color: #16a085;
     border-radius: 0px !important;
+    cursor: pointer;
   }
 
   .btn-bm-green:hover {
