@@ -14,17 +14,30 @@
       <hr>
       <div class="row mb-4">
         <div class="col-md-12">
-            <form #formData='ngForm' (ngSubmit)="updatePassword()">
-                
-                <label for="inputPassword" class="sr-only">New Password</label>
-                <input type="password" [(ngModel)]="newPassword" name="newPassword" class="form-control mb-2" placeholder="Password" required>
-                
-                <label for="inputPassword" class="sr-only">New Password Again</label>
-                <input type="password" [(ngModel)]="newPasswordAgain" name="newPasswordAgain" class="form-control mb-2" placeholder="Password Again" required>
 
-                <button class="btn btn-lg btn-primary btn-block" type="submit">
-                    Update Password
-                </button>
+               
+
+            <form #formData='ngForm' (ngSubmit)="updatePassword()" class="form-inline">
+                
+                    <div class="row">
+                            <div class="col-md-4">
+                                    <input type="password" [(ngModel)]="newPassword" name="newPassword" class="form-control mb-2" placeholder="New Password" style="border-radius: 0px" required>
+                                </div>
+                            <div class="col-md-4">
+                                    <input type="password" [(ngModel)]="newPasswordAgain" name="newPasswordAgain" class="form-control mb-2" placeholder="New Password Again" style="border-radius: 0px" required>
+                                </div>
+                            <div class="col-md-4">
+                                    <button class="btn btn-bm-green btn-block" type="submit">
+                                            Update Password
+                                        </button>
+                            </div>
+                          </div>
+
+                <!-- <label for="inputPassword" class="sr-only">New Password</label> -->
+                
+                <!-- <label for="inputPassword" class="sr-only">New Password Again</label> -->
+
+                
             </form>
       </div>
       </div>
