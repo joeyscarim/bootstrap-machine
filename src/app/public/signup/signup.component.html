@@ -1,4 +1,4 @@
-<app-navbar></app-navbar>
+<!-- <app-navbar></app-navbar>
 
 <section id="background">
     <div class="container">
@@ -35,4 +35,46 @@
 
         </div>
     </div>
-</section>
+</section> -->
+
+
+<section id="background-cover">
+        
+          <div id="background-overlay"></div>
+        
+          <app-navbar></app-navbar>
+          <div class="container">
+        
+            <div class="row">
+              <div class="col-md-4 m-auto">
+                <div class="my-5 bg-light p-3" style="border: 2px solid #35495e">
+                  <h3 class="" style="font-weight:400">Create Free Account</h3>
+                  <hr>
+        
+                  <form #formData='ngForm' (ngSubmit)="onSubmit()">
+                    <label for="inputEmail" class="sr-only">Email address*</label>
+                    <input type="email" [(ngModel)]="email" name="email" class="form-control mb-2 rounded-0" placeholder="Email*" required autofocus>
+                    <small id="emailHelp" class="form-text text-muted px-1 mb-3 d-block">*You will be sent a
+                            <span class="font-weight-bold">confirmation email</span> at this address to activate your account.</small>
+                    
+                    
+
+                    <label for="inputPassword" class="sr-only">Password</label>
+                    <input type="password" [(ngModel)]="password" name="password" class="form-control mb-2 rounded-0" placeholder="Password" required>
+                    <button class="btn btn-lg btn-bm-green btn-block mt-3" type="submit">
+                      Signup
+                    </button>
+                  </form>
+        
+                  <!-- <hr>
+                  <p class="text-center mb-0">
+                  <a routerLink="/forgot-password" class="text-center text-dark">Forgot password?</a>
+                    </p>
+         -->
+                </div>
+                <footer class="text-dark text-center">Boostrap Machine. 2018.</footer>
+        
+              </div>
+            </div>
+          </div>
+        </section>

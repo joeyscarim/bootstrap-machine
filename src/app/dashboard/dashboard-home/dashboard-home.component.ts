@@ -8,7 +8,11 @@ import { AuthService } from './../../core/auth.service';
 })
 export class DashboardHomeComponent implements OnInit {
 
-  constructor(public authService: AuthService) { }
+  constructor(public authService: AuthService) {
+    
+    // authService.checkVerification();
+
+   }
   
   ngOnInit() {
   }

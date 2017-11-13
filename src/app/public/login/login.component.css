@@ -7,20 +7,19 @@
     width:100%;
 }
 
-/* #background-test{
+#background-cover{
     background-image: url(/assets/img/background-cogs.jpg);
     background-size: cover;
     position: fixed;
     width: 100%;
     height: 100%;
-} */
+}
 
-#background-cover{
-    background: #f8f9fa!important;
+#background-overlay{
+    background: rgba(255,255,255,.96);
     position: fixed;
     width: 100%;
     height: 100%;
-    
 }
 
 hr {

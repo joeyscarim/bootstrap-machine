@@ -1,25 +1,41 @@
-#section-cogs {
-	background-image: url('/assets/img/background-cogs.jpg');
-	background-size: cover;
+/* .jumbo-b{
+	background-color:#dceaf3;
 }
 
-.jumbotron {
-	background-color: none;
+	#section-jumbotron{
+		    background-color: #5185a9;
+    background-image: url('/assets/img/dark-geometric.png');
+
+	}
+ */
+
+ #background{
+	/*margin-top:1000px;*/
+background-color: #5185a9;
+   background-image: url('/assets/img/dark-geometric.png');
+   height:100%;
+   position:fixed;
+   width:100%;
 }
 
-#section-footer {
-	background-color: #526f83;
+#background-cover{
+   background-image: url(/assets/img/background-cogs.jpg);
+   background-size: cover;
+   position: fixed;
+   width: 100%;
+   height: 100%;
 }
 
-.btn-primary {
-	color: #fff;
-	background-color: #16a085;
-	border-color: #16a085;
-	border-radius: 0px;
+#background-overlay{
+   background: rgba(255,255,255,.95);
+   position: fixed;
+   width: 100%;
+   height: 100%;
 }
 
-@media (max-width: 768px) {
-h1{
-	font-size:2.5rem;
-}
+hr {
+   margin-top: 1rem;
+   margin-bottom: 1rem;
+   border: 0;
+   border-top: 1px solid rgb(53, 73, 94);
 }

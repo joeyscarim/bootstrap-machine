@@ -1,3 +1,41 @@
 .card {
     border-radius: .3rem;
 }
+
+
+.card {
+    position: relative;
+    display: -ms-flexbox;
+    display: -webkit-box;
+    display: flex;
+    -ms-flex-direction: column;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    flex-direction: column;
+    min-width: 0;
+    word-wrap: break-word;
+    background-color: #fff;
+    background-clip: border-box;
+    border: none;
+    border-radius: .25rem;
+    /* border-bottom: 1px solid #cbd2d6; */
+    /* border-radius: 0px; */
+}
+
+.card-body {
+  
+    padding: 0rem;
+}
+
+.card-title {
+    margin-bottom: 0rem;
+}
+
+.card-text:last-child {
+    margin-bottom: 0;
+    /* margin-left: 36px; */
+    margin-top: 5px;
+    color: #636363;
+    font-weight: 300;
+}
+

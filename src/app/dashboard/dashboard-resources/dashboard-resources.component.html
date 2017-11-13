@@ -12,13 +12,15 @@
       <hr>
       <div class="row mb-4">
         <div class="col-md-12">
-          <div class="card w-100 mb-3" *ngFor="let item of bootstrapEssentials">
+          <div class="card w-100 mb-4" *ngFor="let item of bootstrapEssentials">
             <div class="card-body">
               <h4 class="card-title">
-                <i class="fa fa-circle mr-1" aria-hidden="true" [style.color]=item[0]></i>
-                {{item[1]}}</h4>
-              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.
-                <a href="{{item[3]}}" target="_blank" class="btn btn-dark pull-right" style="    margin-top: -25px;">Visit Site</a>
+                <i class="fa fa-{{item[0]}} mr-1" aria-hidden="true" [style.color]=item[1]></i>
+                {{item[2]}}</h4>
+              <p class="card-text">{{item[3]}}
+                <a href="{{item[4]}}" target="_blank" class="btn btn-dark pull-right" style="    margin-top: -25px;">Visit Site
+                    <i class="fa fa-external-link-square ml-1" aria-hidden="true"></i>    
+                </a>
               </p>
             </div>
           </div>
@@ -29,19 +31,20 @@
       <h3>Fonts & Icons</h3>
       <hr>
       <div class="row mb-4">
-        <div class="col-md-12">
-          <div class="card w-100 mb-3" *ngFor="let item of fontsAndIcons">
-            <div class="card-body">
-              <h4 class="card-title">
-                <i class="fa fa-circle mr-1" aria-hidden="true" [style.color]=item[0]></i>
-                {{item[1]}}</h4>
-              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.
-                <a href="{{item[3]}}" target="_blank" class="btn btn-dark pull-right" style="    margin-top: -25px;">Visit Site</a>
-              </p>
+          <div class="col-md-12">
+            <div class="card w-100 mb-4" *ngFor="let item of fontsAndIcons">
+              <div class="card-body">
+                <h4 class="card-title">
+                  <i class="fa fa-{{item[0]}} mr-1" aria-hidden="true" [style.color]=item[1]></i>
+                  {{item[2]}}</h4>
+                <p class="card-text">{{item[3]}}
+                    <a href="{{item[4]}}" target="_blank" class="btn btn-dark pull-right" style="    margin-top: -25px;">Visit Site
+                        <i class="fa fa-external-link-square ml-1" aria-hidden="true"></i>    
+                    </a>                </p>
+              </div>
             </div>
           </div>
         </div>
-      </div>
 
 
 
@@ -50,38 +53,40 @@
       <h3>Design</h3>
       <hr>
       <div class="row mb-4">
-        <div class="col-md-12">
-          <div class="card w-100 mb-3" *ngFor="let item of design">
-            <div class="card-body">
-              <h4 class="card-title">
-                <i class="fa fa-circle mr-1" aria-hidden="true" [style.color]=item[0]></i>
-                {{item[1]}}</h4>
-              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.
-                <a href="{{item[3]}}" target="_blank" class="btn btn-dark pull-right" style="    margin-top: -25px;">Visit Site</a>
-              </p>
+          <div class="col-md-12">
+            <div class="card w-100 mb-4" *ngFor="let item of design">
+              <div class="card-body">
+                <h4 class="card-title">
+                  <i class="fa fa-{{item[0]}} mr-1" aria-hidden="true" [style.color]=item[1]></i>
+                  {{item[2]}}</h4>
+                <p class="card-text">{{item[3]}}
+                    <a href="{{item[4]}}" target="_blank" class="btn btn-dark pull-right" style="    margin-top: -25px;">Visit Site
+                        <i class="fa fa-external-link-square ml-1" aria-hidden="true"></i>    
+                    </a>                </p>
+              </div>
             </div>
           </div>
         </div>
-      </div>
 
 
 
       <h3>Free Stock Photography</h3>
       <hr>
       <div class="row mb-4">
-        <div class="col-md-12">
-          <div class="card w-100 mb-3" *ngFor="let item of freeStockPhotography">
-            <div class="card-body">
-              <h4 class="card-title">
-                <i class="fa fa-circle mr-1" aria-hidden="true" [style.color]=item[0]></i>
-                {{item[1]}}</h4>
-              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.
-                <a href="{{item[3]}}" target="_blank" class="btn btn-dark pull-right" style="    margin-top: -25px;">Visit Site</a>
-              </p>
+          <div class="col-md-12">
+            <div class="card w-100 mb-4" *ngFor="let item of freeStockPhotography">
+              <div class="card-body">
+                <h4 class="card-title">
+                  <i class="fa fa-{{item[0]}} mr-1" aria-hidden="true" [style.color]=item[1]></i>
+                  {{item[2]}}</h4>
+                <p class="card-text">{{item[3]}}
+                    <a href="{{item[4]}}" target="_blank" class="btn btn-dark pull-right" style="    margin-top: -25px;">Visit Site
+                        <i class="fa fa-external-link-square ml-1" aria-hidden="true"></i>    
+                    </a>                </p>
+              </div>
             </div>
           </div>
         </div>
-      </div>
 
 
 <!-- 
@@ -158,19 +163,20 @@
       <h3>Patterns & Textures</h3>
       <hr>
       <div class="row mb-4">
-        <div class="col-md-12">
-          <div class="card w-100 mb-3" *ngFor="let item of texturesAndPatterns">
-            <div class="card-body">
-              <h4 class="card-title">
-                <i class="fa fa-circle mr-1" aria-hidden="true" [style.color]=item[0]></i>
-                {{item[1]}}</h4>
-              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.
-                <a href="{{item[3]}}" target="_blank" class="btn btn-dark pull-right" style="    margin-top: -25px;">Visit Site</a>
-              </p>
+          <div class="col-md-12">
+            <div class="card w-100 mb-4" *ngFor="let item of texturesAndPatterns">
+              <div class="card-body">
+                <h4 class="card-title">
+                  <i class="fa fa-{{item[0]}} mr-1" aria-hidden="true" [style.color]=item[1]></i>
+                  {{item[2]}}</h4>
+                <p class="card-text">{{item[3]}}
+                    <a href="{{item[4]}}" target="_blank" class="btn btn-dark pull-right" style="    margin-top: -25px;">Visit Site
+                        <i class="fa fa-external-link-square ml-1" aria-hidden="true"></i>    
+                    </a>                </p>
+              </div>
             </div>
           </div>
         </div>
-      </div>
 
 
     </main>

@@ -25,6 +25,10 @@ export class SignupComponent implements OnInit {
   ngOnInit() {}
 
   onSubmit() {
+    console.log("Submitted");
+    console.log("Username is " + this.email);
+    console.log("Password is " + this.password);
+    
     this.authService.signup(this.email, this.password);
     this.password = this.email = '';
   }
