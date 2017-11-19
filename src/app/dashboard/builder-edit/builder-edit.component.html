@@ -10,7 +10,7 @@
     <p>Choose a category and then drag elements from here to the right side. When you're happy with your template, press "export" to save it.</p>
  <div  [dragula]='"first-bag"' id='left'>
 
-  <div>
+  <!-- <div>
     <header>
         <nav class="navbar navbar-expand-lg navbar-dark bg-faded" style="background-color: #dc3545;">
           <a class="navbar-brand" href="#">Bootstrap <strong>Machine</strong></a>
@@ -29,28 +29,21 @@
             </ul>
           </div>
         
-          
-        <!-- <p class="ml-auto text-light" *ngIf="authService.user | async">Welcome {{ (authService.user | async)?.email }}!</p> -->
-        </nav>
+              </nav>
         </header>
-  <div>
+  <div> -->
 
 
-  </div>
-  </div> 
+  <!-- </div> -->
+  <!-- </div>  -->
         <div>
-          <div class="container">
-          <div class="row">
-            <div class="col-md-4 bg-primary">A</div>
-            <div class="col-md-4 bg-dark">B</div>
-            <div class="col-md-4 bg-sucess">c</div>
-          </div>
-          </div>
-
+          <app-element-navbar01></app-element-navbar01>
 
         </div>
         <div>
-            <nav class="navbar navbar-toggleable-md navbar-light bg-faded">
+            <app-element-navbar02></app-element-navbar02>
+            
+            <!-- <nav class="navbar navbar-toggleable-md navbar-light bg-faded">
                 <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                   <span class="navbar-toggler-icon"></span>
                 </button>
@@ -73,17 +66,17 @@
                     <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
                   </form>
                 </div>
-              </nav>
+              </nav> -->
               
 
         </div>
-        <section id="section-footer">
+        <!-- <section id="section-footer">
             <div class="container">
-              <!-- <div class="row"> -->
+              <div class="row">
                 <p class="text-center text-light p-4 mb-0">Bootstrap Machine. 2018.</p>
-              <!-- </div> -->
+              </div>
             </div>
-          </section>
+          </section> -->
       </div>
 	</div>
 
@@ -116,7 +109,7 @@
         </button>
       </div>
       <div class="modal-body">
-        <pre class="bg-dark text-white">{{string}}</pre>
+        <pre class="bg-dark text-white py-2 px-2 ">{{string}}</pre>
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>

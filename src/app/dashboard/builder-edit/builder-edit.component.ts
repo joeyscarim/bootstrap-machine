@@ -81,14 +81,33 @@ string: string;
     this.string = elem.innerHTML.toString();
     // string.replace('_ngcontent-c1', '');
     this.string = this.string.replace(/_ngcontent-c1=""/g, '');
+
+
+    this.string = this.string.replace(/_ngcontent-c4="" /g, '');
+    
+    this.string = this.string.replace(/<div  class="">/g, '');
+    this.string = this.string.replace(/<app-element-navbar02  _nghost-c4="">/g, '');
+this.string = this.string.replace(/<\/app-element-navbar02>/g, '');
+this.string = this.string.replace(/<\/div>/g, '');
+this.string = this.string.replace(/\n   /g, '');
+
+    this.string = this.string.trim();
+    
+    
   }
 
   exportCode() {
     // console.log("the code!" + this.div);
-    const elem: Element = document.getElementById("right");
+    const elem: Element = document.getElementById('right');
+    // elem.classList.remove('navbar-brand');
+    // elem.classList.remove("mystyle");
+    // elem.classList.remove("mystyle");
     this.string = elem.innerHTML.toString();
+    
     // string.replace('_ngcontent-c1', '');
     this.string = this.string.replace(/_ngcontent-c1=""/g, '');
+    this.string = this.string.replace('app', '');
+    
     alert(this.string);
     // alert((elem.innerHTML).replace('_ngcontent-c1=\"\"', ''));
     console.log("a ok " + elem.innerHTML);

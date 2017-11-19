@@ -4,6 +4,7 @@ import { AppComponent } from './app.component';
 import { FormsModule } from '@angular/forms';
 
 // public
+import { HomeComponent } from './public/home/home.component';
 import { LoginComponent } from './public/login/login.component';
 import { SignupComponent } from './public/signup/signup.component';
 import { ForgotPasswordComponent } from './public/forgot-password/forgot-password.component';
@@ -13,11 +14,17 @@ import { PrivacyPolicyComponent } from './public/privacy-policy/privacy-policy.c
 import { TermsAndConditionsComponent } from './public/terms-and-conditions/terms-and-conditions.component';
 import { PageNotFoundComponent } from './public/page-not-found/page-not-found.component';
 
+// partials
+import { SidemenuComponent } from './partials/sidemenu/sidemenu.component';
+import { NavbarComponent } from './partials/navbar/navbar.component';
+import { FooterComponent } from './partials/footer/footer.component';
+
 // gallery
 import { Template01Component } from './gallery/01-Launchpad/template01.component';
 
-
-import { HomeComponent } from './public/home/home.component';
+// elements
+import { ElementNavbar01Component } from './elements/navbars/navbar01/navbar01.component';
+import { ElementNavbar02Component } from './elements/navbars/navbar02/navbar02.component';
 
 // core
 import { routes } from './core/app.routes';
@@ -32,11 +39,6 @@ import { AngularFireModule } from 'angularfire2';
 import { environment } from '../environments/environment';
 import { AngularFireAuthModule } from 'angularfire2/auth';
 import { ToastrModule } from 'ngx-toastr';
-
-// partials
-import { SidemenuComponent } from './partials/sidemenu/sidemenu.component';
-import { NavbarComponent } from './partials/navbar/navbar.component';
-import { FooterComponent } from './partials/footer/footer.component';
 
 // dashboard components
 import { DashboardHomeComponent } from './dashboard/dashboard-home/dashboard-home.component';
@@ -67,7 +69,9 @@ import {DashboardBuilderEditComponent} from './dashboard/builder-edit/builder-ed
     UsageRulesComponent,
     PrivacyPolicyComponent,
     TermsAndConditionsComponent,
-    PageNotFoundComponent
+    PageNotFoundComponent,
+    ElementNavbar01Component,
+    ElementNavbar02Component
   ],
   imports: [
     BrowserModule,
