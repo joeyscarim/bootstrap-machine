@@ -11,6 +11,8 @@
           <h3 class="" style="font-weight:400">Login</h3>
           <hr>
 
+          <button (click)="loginWithGoogle()">Login with Google</button>
+
           <form #formData='ngForm' (ngSubmit)="onSubmit()">
             <label for="inputEmail" class="sr-only">Email address</label>
             <input type="email" [(ngModel)]="email" name="email" class="form-control mb-2 rounded-0" placeholder="Email" required autofocus>

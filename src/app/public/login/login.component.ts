@@ -27,5 +27,12 @@ export class LoginComponent implements OnInit {
     this.authService.login(this.email, this.password);
     this.password = '';
     }
+    
+    loginWithGoogle() {
+      alert("I worked!");
+      this.authService.loginWithGoogle2();
+      // this.password = '';
+      }
+
 
 }

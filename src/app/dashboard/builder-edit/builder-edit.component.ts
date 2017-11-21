@@ -68,6 +68,22 @@ string: string;
       }
     });
 
+    // dragula.drop.subscribe((value) => {
+    //   this.onDrop(value.slice(1));
+    // });
+
+    dragula.drop.subscribe((el) => {
+      // el.addClass('howdy');
+     (el[1].childNodes[1].classList.add('howdy'));
+    //  console.log(el.slice(1));
+
+    //  const element = document.getElementById("div1");
+    //  element.classList.add("otherclass");
+      
+      // this.onDrop(value.slice(1));
+    });
+
+
     // dragula.setOptions('first-bag', {
     //   copy: true,
     //   copySortSource: true
@@ -115,6 +131,11 @@ this.string = this.string.replace(/\n   /g, '');
     
   }
 
+  // private onDrag(args) {
+  //   const [e, el] = args;
+  //   this.removeClass(e, 'ex-moved');
+  // }
+
   ngOnInit() {
     // this.dragula
     //   .drag
@@ -122,13 +143,21 @@ this.string = this.string.replace(/\n   /g, '');
     //     this.msg = `Dragging the ${ value[1].innerText }!`;
     //   });
 
+    // private onDrop(args) {
+    //   let [e, el] = args;
+    //   this.addClass(e, 'ex-moved');
+    // }
+
     // this.dragula
     //   .drop
     //   .subscribe(value => {
-    //     this.msg = `Dropped the ${ value[1].innerText }!`;
+    //     // this.msg = `Dropped the ${ value[1].innerText }!`;
+    //     alert(value);
+    //     value.addClass('ex-moved');
+        
 
     //     setTimeout(() => {
-    //       this.msg = '';
+    //       // this.msg = '';
     //     }, 1000);
     //   });
   }
