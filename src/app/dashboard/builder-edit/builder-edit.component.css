@@ -46,3 +46,13 @@
 .custom-select {
     width: 100%;
 }
+
+.welcome-text{
+    text-align: left;
+    /* color: #d2d2d2; */
+    /* color: #e2e2e2; */
+    color: #efefef;
+    
+    z-index: -1;
+    margin-bottom:.3em;
+}

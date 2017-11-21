@@ -1,17 +1,24 @@
   <!-- <app-navbar></app-navbar> -->
   <header>
       <nav class="navbar navbar-expand-lg fixed-top navbar-dark bg-faded" style="background-color: #34495e;    padding: 15px;">
-        <a class="navbar-brand" href="#">Bootstrap <strong>Machine</strong></a>
+        <div class="navbar-brand">Bootstrap <strong>Machine</strong></div>
         
       
         <!-- <div *ngIf="(authService.user | async)" id="navbarNavDropdown" class="navbar-collapse collapse"> -->
           <ul class="navbar-nav ml-auto">
-              <button type="button" (click)="updateString()" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
-                  View Code
+            <li class="nav-item">
+              <button type="button" (click)="updateString()" class="btn btn-bm-green" data-toggle="modal" data-target="#exampleModal">
+                  <i class="fa fa-file-code-o mr-1" aria-hidden="true"></i> View Code
                 </button>
+              </li>
                 
             <li class="nav-item">
-              <a class="nav-link text-light" routerLink="/dashboard">Exit</a>
+              <a class="btn btn-bm-green btn-danger ml-2" routerLink="/dashboard">
+              <!-- <button type="button" (click)="updateString()" class="btn btn-bm-green btn-danger ml-2" data-toggle="modal" data-target="#exampleModal"> -->
+                  <i class="fa fa-times mr-1" aria-hidden="true"></i>   
+                Exit
+                <!-- </button> -->
+              </a>
             </li>
             <!-- <li class="nav-item">
               <a routerLink="/signup" class="btn btn-light">Join Free</a>
@@ -28,18 +35,7 @@
   	<div class="row">
 	<div class="col-md-3 bg-light pt-3">
     
-    <!-- <div class="dropdown mb-3">
-        <button style="text-align: left;" class="btn btn-secondary btn-block dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-          Category: Navbar
-        </button>
-        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-          <a class="dropdown-item" href="#">Navbar</a>
-          <a class="dropdown-item" href="#">Jumbotron</a>
-          <a class="dropdown-item" href="#">Footer</a>
-        </div>
-      </div> -->
-      <!-- ng-change="unitChanged()" -->
-      <!-- {{category}} <br> -->
+  
 
       <select  class="custom-select mb-3" (ngModelChange)="update(value)" [(ngModel)]="category">
           <option ng-value="Navbar">Navbar</option>
@@ -47,9 +43,7 @@
           <option ng-value="footer">Footer</option>
         </select>
 
-        <!-- <div  >
-          OKOKOKOKOKOKOK
-        </div> -->
+ 
 
     <div  [dragula]='"first-bag"' id='left'>
 
@@ -69,9 +63,24 @@
 	</div>
 
 
-	<div class="col-md-9 bg-dark">
- <div style="    height: -webkit-fill-available;" class="bg-light mx-1 my-3" [dragula]='"first-bag"' id='right' >
+	<div class="col-md-9">
+
+<div class="mt-3">
+    <h2 class="welcome-text">WELCOME TO THE DRAG & DROP TEMPLATE BUILDER <i class="fa fa-exclamation" aria-hidden="true"></i>
+    </h2>
+    <h2 class="welcome-text">DRAG ELEMENTS RIGHT HERE <i class="fa fa-arrow-circle-up" aria-hidden="true"></i>
+      TO ADD THEM TO YOUR TEMPLATE</h2>
+    
+    <h2 class="welcome-text"><i class="fa fa-arrow-circle-left" aria-hidden="true"></i>
+      CHANGE THE CATEGORY TO VIEW DIFFERENT ELEMENTS</h2>
+    <h2 class="welcome-text">PRESS VIEW CODE  <i class="fa fa-file-code-o ml-1" aria-hidden="true"></i>
+      TO COPY YOUR CODE ANYTIME</h2>
+</div>
+
+ <div style="    height: -webkit-fill-available;        margin-top: -11em !important;
+ " class="bg-white mt-3" [dragula]='"first-bag"' id='right' >
         <!-- <div>Top of page</div> -->
+
       </div>
 	</div>
 
