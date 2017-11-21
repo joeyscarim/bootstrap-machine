@@ -1,90 +1,75 @@
-  <app-navbar></app-navbar>
+  <!-- <app-navbar></app-navbar> -->
+  <header>
+      <nav class="navbar navbar-expand-lg fixed-top navbar-dark bg-faded" style="background-color: #34495e;    padding: 15px;">
+        <a class="navbar-brand" href="#">Bootstrap <strong>Machine</strong></a>
+        
+      
+        <!-- <div *ngIf="(authService.user | async)" id="navbarNavDropdown" class="navbar-collapse collapse"> -->
+          <ul class="navbar-nav ml-auto">
+              <button type="button" (click)="updateString()" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
+                  View Code
+                </button>
+                
+            <li class="nav-item">
+              <a class="nav-link text-light" routerLink="/dashboard">Exit</a>
+            </li>
+            <!-- <li class="nav-item">
+              <a routerLink="/signup" class="btn btn-light">Join Free</a>
+            </li> -->
+          </ul>
+        <!-- </div> -->
+      
+      <!-- <p class="ml-auto text-light" *ngIf="authService.user | async">Welcome {{ (authService.user | async)?.email }}!</p> -->
+      </nav>
+      </header>
+      
 
   <div class="container-fluid" style="margin-top:56px">
   	<div class="row">
-	<div class="col-md-4 bg-light">
-    <!-- <button (click)="exportCode()">Export</button> -->
-    <button type="button" (click)="updateString()" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
-      View Code
-    </button>
-    <p>Choose a category and then drag elements from here to the right side. When you're happy with your template, press "export" to save it.</p>
- <div  [dragula]='"first-bag"' id='left'>
+	<div class="col-md-3 bg-light pt-3">
+    
+    <!-- <div class="dropdown mb-3">
+        <button style="text-align: left;" class="btn btn-secondary btn-block dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Category: Navbar
+        </button>
+        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+          <a class="dropdown-item" href="#">Navbar</a>
+          <a class="dropdown-item" href="#">Jumbotron</a>
+          <a class="dropdown-item" href="#">Footer</a>
+        </div>
+      </div> -->
+      <!-- ng-change="unitChanged()" -->
+      <!-- {{category}} <br> -->
 
-  <!-- <div>
-    <header>
-        <nav class="navbar navbar-expand-lg navbar-dark bg-faded" style="background-color: #dc3545;">
-          <a class="navbar-brand" href="#">Bootstrap <strong>Machine</strong></a>
-          
-          <button  class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div  class="navbar-collapse collapse">
-            <ul class="navbar-nav ml-auto">
-              <li class="nav-item">
-                <a class="nav-link text-light" routerLink="/login">Login</a>
-              </li>
-              <li class="nav-item">
-                <a routerLink="/signup" class="btn btn-light">Join Free</a>
-              </li>
-            </ul>
-          </div>
-        
-              </nav>
-        </header>
-  <div> -->
+      <select  class="custom-select mb-3" (ngModelChange)="update(value)" [(ngModel)]="category">
+          <option ng-value="Navbar">Navbar</option>
+          <option ng-value="jumbotron">Jumbtron</option>
+          <option ng-value="footer">Footer</option>
+        </select>
+
+        <!-- <div  >
+          OKOKOKOKOKOKOK
+        </div> -->
+
+    <div  [dragula]='"first-bag"' id='left'>
 
 
-  <!-- </div> -->
-  <!-- </div>  -->
-        <div>
-          
+        <div *ngIf="category == 'Navbar'">
           <app-element-navbar01 class="zoom"></app-element-navbar01>
-          <!-- <img src="/assets/img/product2.png" class="img-fluid" *ngIf=checker2 > -->
         </div>
 
-
-        <div>
+        <div *ngIf="category == 'Navbar'">
             <app-element-navbar02 class="zoom"></app-element-navbar02>
-            
-            <!-- <nav class="navbar navbar-toggleable-md navbar-light bg-faded">
-                <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                  <span class="navbar-toggler-icon"></span>
-                </button>
-                <a class="navbar-brand" href="#">Navbar</a>
-              
-                <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                  <ul class="navbar-nav mr-auto">
-                    <li class="nav-item active">
-                      <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
-                    </li>
-                    <li class="nav-item">
-                      <a class="nav-link" href="#">Link</a>
-                    </li>
-                    <li class="nav-item">
-                      <a class="nav-link disabled" href="#">Disabled</a>
-                    </li>
-                  </ul>
-                  <form class="form-inline my-2 my-lg-0">
-                    <input class="form-control mr-sm-2" type="text" placeholder="Search">
-                    <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-                  </form>
-                </div>
-              </nav> -->
-              
-
         </div>
-        <!-- <section id="section-footer">
-            <div class="container">
-              <div class="row">
-                <p class="text-center text-light p-4 mb-0">Bootstrap Machine. 2018.</p>
-              </div>
-            </div>
-          </section> -->
+
       </div>
+
+
+
 	</div>
 
 
-	<div class="col-md-8 bg-dark">
+	<div class="col-md-9 bg-dark">
  <div style="    height: -webkit-fill-available;" class="bg-light mx-1 my-3" [dragula]='"first-bag"' id='right' >
         <!-- <div>Top of page</div> -->
       </div>

@@ -19,9 +19,30 @@
 
 .howdy{
     zoom: 1 !important;
+    /* margin-bottom:0px !important; */
+    /* border:none; */
+    margin-bottom:0 !important;
 }
 
 .zoom {
     zoom: .2;
     cursor: pointer;
+    margin-bottom: 1em;
+    display: block;
+}
+
+
+.dropdown-toggle::after {
+    right: 1em;
+    position: absolute;
+    top: 1em;
+}
+
+.dropdown-menu.show {
+    display: block;
+    width: 100%;
+}
+
+.custom-select {
+    width: 100%;
 }

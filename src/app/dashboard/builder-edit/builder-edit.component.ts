@@ -10,6 +10,7 @@ export class DashboardBuilderEditComponent implements OnInit {
 
   // @ViewChild('right') code;
 string: string;
+category: string = "Navbar";
   // testhtml: any;
   // @ViewChild('#testhtml') div: ElementRef;
 
@@ -110,6 +111,11 @@ this.string = this.string.replace(/\n   /g, '');
     this.string = this.string.trim();
     
     
+  }
+
+  update(value) {
+    console.log(value);
+    this.category = value;
   }
 
   exportCode() {
