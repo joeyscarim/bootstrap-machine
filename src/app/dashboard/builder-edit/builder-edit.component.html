@@ -37,10 +37,10 @@
     
   
 
-      <select  class="custom-select mb-3" (ngModelChange)="update(value)" [(ngModel)]="category">
-          <option ng-value="Navbar">Navbar</option>
-          <option ng-value="jumbotron">Jumbtron</option>
-          <option ng-value="footer">Footer</option>
+      <select  class="custom-select mb-3" [(ngModel)]="category">
+          <option>Navbar</option>
+          <option>Jumbtron</option>
+          <option>Footer</option>
         </select>
 
  
@@ -53,6 +53,10 @@
         </div>
 
         <div *ngIf="category == 'Navbar'">
+            <app-element-navbar02 class="zoom"></app-element-navbar02>
+        </div>
+
+        <div *ngIf="category == 'Jumbtron'">
             <app-element-navbar02 class="zoom"></app-element-navbar02>
         </div>
 
@@ -74,7 +78,7 @@
     <h2 class="welcome-text"><i class="fa fa-arrow-circle-left" aria-hidden="true"></i>
       CHANGE THE CATEGORY TO VIEW DIFFERENT ELEMENTS</h2>
     <h2 class="welcome-text">PRESS VIEW CODE  <i class="fa fa-file-code-o ml-1" aria-hidden="true"></i>
-      TO COPY YOUR CODE ANYTIME</h2>
+      TO VIEW & COPY YOUR CODE</h2>
 </div>
 
  <div style="    height: -webkit-fill-available;        margin-top: -11em !important;
