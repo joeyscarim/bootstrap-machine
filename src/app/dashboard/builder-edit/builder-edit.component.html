@@ -39,7 +39,8 @@
 
       <select  class="custom-select mb-3" [(ngModel)]="category">
           <option>Navbar</option>
-          <option>Jumbtron</option>
+          <option>Jumbotron</option>
+          <option>Columns</option>
           <option>Footer</option>
         </select>
 
@@ -56,9 +57,35 @@
             <app-element-navbar02 class="zoom"></app-element-navbar02>
         </div>
 
-        <div *ngIf="category == 'Jumbtron'">
-            <app-element-navbar02 class="zoom"></app-element-navbar02>
-        </div>
+        <div *ngIf="category == 'Footer'">
+          <app-element-footer01 class="zoom"></app-element-footer01>
+      </div>
+
+      <div *ngIf="category == 'Footer'">
+        <app-element-footer02 class="zoom"></app-element-footer02>
+    </div>
+
+    <div *ngIf="category == 'Jumbotron'">
+      <app-element-jumbotron01 class="zoom"></app-element-jumbotron01>
+  </div>
+
+  <div *ngIf="category == 'Jumbotron'">
+    <app-element-jumbotron02 class="zoom"></app-element-jumbotron02>
+</div>
+
+    <div *ngIf="category == 'Columns'">
+      <app-element-column-halves class="zoom"></app-element-column-halves>
+  </div>
+
+  <div *ngIf="category == 'Columns'">
+    <app-element-column-thirds class="zoom"></app-element-column-thirds>
+</div>
+
+<div *ngIf="category == 'Columns'">
+  <app-element-column-fourths class="zoom"></app-element-column-fourths>
+</div>
+
+
 
       </div>
 
@@ -69,7 +96,7 @@
 
 	<div class="col-md-9">
 
-<div class="mt-3">
+<!-- <div class="mt-3">
     <h2 class="welcome-text">WELCOME TO THE DRAG & DROP TEMPLATE BUILDER <i class="fa fa-exclamation" aria-hidden="true"></i>
     </h2>
     <h2 class="welcome-text">DRAG ELEMENTS RIGHT HERE <i class="fa fa-arrow-circle-up" aria-hidden="true"></i>
@@ -79,9 +106,9 @@
       CHANGE THE CATEGORY TO VIEW DIFFERENT ELEMENTS</h2>
     <h2 class="welcome-text">PRESS VIEW CODE  <i class="fa fa-file-code-o ml-1" aria-hidden="true"></i>
       TO VIEW & COPY YOUR CODE</h2>
-</div>
+</div> -->
 
- <div style="    height: -webkit-fill-available;        margin-top: -11em !important;
+ <div style="    height: -webkit-fill-available;       
  " class="bg-white mt-3" [dragula]='"first-bag"' id='right' >
         <!-- <div>Top of page</div> -->
 
