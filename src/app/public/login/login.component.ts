@@ -29,7 +29,7 @@ export class LoginComponent implements OnInit {
     }
     
     loginWithGoogle() {
-      alert("I worked!");
+      // alert("I worked!");
       this.authService.loginWithGoogle2();
       // this.password = '';
       }

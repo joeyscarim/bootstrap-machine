@@ -11,9 +11,12 @@
           <h3 class="" style="font-weight:400">Login</h3>
           <hr>
 
-          <button (click)="loginWithGoogle()">Login with Google</button>
+          <!-- <p>Login with one of the social p</p> -->
+          <button class="btn btn-lg btn-google btn-block mt-3" (click)="loginWithGoogle()">
+              <span class="fa fa-google mr-1"></span>
+            Login with Google</button>
 
-          <form #formData='ngForm' (ngSubmit)="onSubmit()">
+          <!-- <form #formData='ngForm' (ngSubmit)="onSubmit()">
             <label for="inputEmail" class="sr-only">Email address</label>
             <input type="email" [(ngModel)]="email" name="email" class="form-control mb-2 rounded-0" placeholder="Email" required autofocus>
 
@@ -22,12 +25,12 @@
             <button class="btn btn-lg btn-bm-green btn-block mt-3" type="submit">
               Login
             </button>
-          </form>
+          </form> -->
 
-          <hr>
-          <p class="text-center mb-0">
+          <!-- <hr> -->
+          <!-- <p class="text-center mb-0">
           <a routerLink="/forgot-password" class="text-center text-dark">Forgot password?</a>
-            </p>
+            </p> -->
 
         </div>
         <footer class="text-dark text-center">Boostrap Machine. 2018.</footer>

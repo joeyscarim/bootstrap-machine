@@ -19,3 +19,17 @@ hr {
    border: 0;
    border-top: 1px solid rgb(53, 73, 94);
 }
+
+.btn-google{
+    background-color: #DD4B39;
+    border-radius:0px;
+    color: white;
+    cursor:pointer;
+}
+
+.btn-google:hover{
+    background-color: rgb(180, 59, 46);
+    border-radius:0px;
+    color: white;
+    cursor:pointer;
+}

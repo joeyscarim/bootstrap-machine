@@ -33,4 +33,10 @@ export class SignupComponent implements OnInit {
     this.password = this.email = '';
   }
 
+  loginWithGoogle() {
+    // alert("I worked!");
+    this.authService.loginWithGoogle2();
+    // this.password = '';
+    }
+
 }
