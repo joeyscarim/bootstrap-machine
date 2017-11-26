@@ -2,11 +2,11 @@ import { Component, OnInit } from '@angular/core';
 import { AuthService } from '../../../core/auth.service';
 
 @Component({
-  selector: 'app-element-navbar01',
-  templateUrl: './navbar01.component.html',
-  styleUrls: ['./navbar01.component.css']
+  selector: 'app-element-column-two-thirds-fill',
+  templateUrl: './column-two-thirds-fill.component.html',
+  styleUrls: ['./column-two-thirds-fill.component.css']
 })
-export class ElementNavbar01Component implements OnInit {
+export class ElementColumnTwoThirdsFillComponent implements OnInit {
 
   constructor(public authService: AuthService) { }
 
