@@ -26,6 +26,19 @@ import { Template01Component } from './gallery/01-Launchpad/template01.component
 import { ElementNavbar01Component } from './elements/navbars/navbar01/navbar01.component';
 import { ElementNavbar02Component } from './elements/navbars/navbar02/navbar02.component';
 
+import { ElementFooter01Component } from './elements/footers/footer01/footer01.component';
+import { ElementFooter02Component } from './elements/footers/footer02/footer02.component';
+
+import { ElementJumbotron01Component } from './elements/jumbotrons/jumbotron01/jumbotron01.component';
+import { ElementJumbotron02Component } from './elements/jumbotrons/jumbotron02/jumbotron02.component';
+
+import { ElementColumnHalvesComponent } from './elements/columns/column-halves/column-halves.component';
+import { ElementColumnThirdsComponent } from './elements/columns/column-thirds/column-thirds.component';
+import { ElementColumnFourthsComponent } from './elements/columns/column-fourths/column-fourths.component';
+
+import { ElementColumnThirdFillComponent } from './elements/columns/column-third-fill/column-third-fill.component';
+import { ElementColumnTwoThirdsFillComponent } from './elements/columns/column-two-thirds-fill/column-two-thirds-fill.component';
+
 // core
 import { routes } from './core/app.routes';
 import { AuthGuard} from './core/auth.guard';
@@ -71,7 +84,16 @@ import {DashboardBuilderEditComponent} from './dashboard/builder-edit/builder-ed
     TermsAndConditionsComponent,
     PageNotFoundComponent,
     ElementNavbar01Component,
-    ElementNavbar02Component
+    ElementNavbar02Component,
+    ElementFooter01Component,
+    ElementFooter02Component,
+    ElementJumbotron01Component,
+    ElementJumbotron02Component,
+    ElementColumnHalvesComponent,
+    ElementColumnThirdsComponent,
+    ElementColumnFourthsComponent,
+    ElementColumnThirdFillComponent,
+    ElementColumnTwoThirdsFillComponent
   ],
   imports: [
     BrowserModule,
