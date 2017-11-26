@@ -20,6 +20,8 @@ import { NavbarComponent } from './partials/navbar/navbar.component';
 import { FooterComponent } from './partials/footer/footer.component';
 
 // gallery
+import { Template02Component } from './gallery/02-Legacy/template02.component';
+
 import { Template01Component } from './gallery/01-Launchpad/template01.component';
 
 // elements
@@ -77,7 +79,10 @@ import {DashboardBuilderEditComponent} from './dashboard/builder-edit/builder-ed
     DashboardGalleryComponent,
     DashboardBuilderComponent,
     DashboardAccountComponent,
+
     Template01Component,
+    Template02Component,
+    
     FooterComponent,
     UsageRulesComponent,
     PrivacyPolicyComponent,
