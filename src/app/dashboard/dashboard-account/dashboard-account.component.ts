@@ -17,7 +17,7 @@ export class DashboardAccountComponent implements OnInit {
   }
 
   updatePassword() {
-    this.authService.updatePassword(this.newPassword, this.newPasswordAgain);
+    // this.authService.updatePassword(this.newPassword, this.newPasswordAgain);
     this.newPassword = this.newPasswordAgain = '';
   }
 

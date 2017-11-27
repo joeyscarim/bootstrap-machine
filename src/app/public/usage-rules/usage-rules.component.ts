@@ -1,6 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { AuthService } from '../../core/auth.service';
-import {Router} from '@angular/router';
 
 @Component({
   selector: 'app-usage-rules',
@@ -8,14 +6,9 @@ import {Router} from '@angular/router';
   styleUrls: ['./usage-rules.component.css']
 })
 export class UsageRulesComponent implements OnInit {
-    email: string;
-  password: string;
 
-  constructor(public authService: AuthService,  private router: Router) {}
+  constructor() { }
 
+  ngOnInit() { }
 
-
-    ngOnInit() {
-  }
 }
-

@@ -22,22 +22,13 @@ export class LoginComponent implements OnInit {
    }
 
   ngOnInit() {}
-
-  onSubmit() {
-    this.authService.login(this.email, this.password);
-    this.password = '';
-    }
     
     loginWithGoogle() {
-      // alert("I worked!");
-      this.authService.loginWithGoogle2();
-      // this.password = '';
+      this.authService.loginWithGoogle();
       }
 
       loginWithGithub() {
-        // alert("I worked!");
         this.authService.loginWithGithub();
-        // this.password = '';
         }
 
 

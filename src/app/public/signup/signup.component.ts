@@ -16,7 +16,7 @@ export class SignupComponent implements OnInit {
 
   constructor(private firebaseAuth: AngularFireAuth, public authService: AuthService, public router: Router) {
     this.firebaseAuth.auth.onAuthStateChanged(user => {
-        if (user && user.emailVerified === true) {
+        if (user) {
         this.router.navigateByUrl('/dashboard');
       }
     });
@@ -24,25 +24,12 @@ export class SignupComponent implements OnInit {
 
   ngOnInit() {}
 
-  onSubmit() {
-    console.log("Submitted");
-    console.log("Username is " + this.email);
-    console.log("Password is " + this.password);
-    
-    this.authService.signup(this.email, this.password);
-    this.password = this.email = '';
-  }
-
   loginWithGoogle() {
-    // alert("I worked!");
-    this.authService.loginWithGoogle2();
-    // this.password = '';
+    this.authService.loginWithGoogle();
     }
 
     loginWithGithub() {
-      // alert("I worked!");
       this.authService.loginWithGithub();
-      // this.password = '';
       }
 
 }

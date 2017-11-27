@@ -1,6 +1,4 @@
-import { Component, OnInit, HostBinding } from '@angular/core';
-import { Router } from '@angular/router';
-import { AuthService } from '../../core/auth.service';
+import { Component, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-signup-thanks',
@@ -9,13 +7,8 @@ import { AuthService } from '../../core/auth.service';
 })
 export class SignupThanksComponent implements OnInit {
 
- 
+  constructor() { }
 
-  constructor(public authService: AuthService) { }
-
-  ngOnInit() {
-  }
-
- 
+  ngOnInit() { }
 
 }

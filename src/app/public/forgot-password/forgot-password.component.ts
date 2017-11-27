@@ -13,18 +13,18 @@ export class ForgotPasswordComponent implements OnInit {
   email: string;
 
   constructor(private firebaseAuth: AngularFireAuth, public authService: AuthService, private router: Router) {
-    this.firebaseAuth.auth.onAuthStateChanged(user => {
-      if (user) {
-        this.router.navigateByUrl('/dashboard');
-      }
-    });
+    // this.firebaseAuth.auth.onAuthStateChanged(user => {
+    //   if (user) {
+    //     this.router.navigateByUrl('/dashboard');
+    //   }
+    // });
    }
 
   ngOnInit() {}
 
   onSubmit() {
-    this.authService.sendForgotPasswordEmail(this.email);
-    this.email = '';
+    // this.authService.sendForgotPasswordEmail(this.email);
+    // this.email = '';
     }
 
 }
