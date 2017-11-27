@@ -97,16 +97,27 @@ category: string = "Navbar";
     const elem: Element = document.getElementById("right");
     this.string = elem.innerHTML.toString();
     // string.replace('_ngcontent-c1', '');
-    this.string = this.string.replace(/_ngcontent-c1=""/g, '');
+
+    //remove all _ngcontent instacnes
+    this.string = this.string.replace(/_ngcontent-c[0-9]*=""/g, '');
 
 
-    this.string = this.string.replace(/_ngcontent-c4="" /g, '');
+    // this.string = this.string.replace(/_ngcontent-c4="" /g, '');
     
     this.string = this.string.replace(/<div  class="">/g, '');
-    this.string = this.string.replace(/<app-element-navbar02  _nghost-c4="">/g, '');
-this.string = this.string.replace(/<\/app-element-navbar02>/g, '');
-this.string = this.string.replace(/<\/div>/g, '');
-this.string = this.string.replace(/\n   /g, '');
+    // this.string = this.string.replace(/<app-element-navbar02  _nghost-c4="">/g, '');
+
+    // <app-element-column-halves  class="zoom howdy" _nghost-c8="">
+
+    this.string = this.string.replace(/<app-element-(.*)  class="zoom howdy" _nghost-c[0-9]*="">/g, '');
+    
+this.string = this.string.replace(/<\/app-element-(.*)>/g, '');
+this.string = this.string.replace(/  /g, ' ');
+this.string = this.string.replace(/\n <\/div>\n   /g, '');
+this.string = this.string.replace(/\n <\/div>/g, '');
+
+
+// this.string = this.string.replace(/\n   /g, '');
 
     this.string = this.string.trim();
     
