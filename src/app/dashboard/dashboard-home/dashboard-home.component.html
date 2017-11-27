@@ -4,22 +4,35 @@
       <div class="row">
 <app-sidemenu></app-sidemenu>
         <main role="main" class="col-sm-9 ml-sm-auto col-md-10 p-4">
-          <h1 class="display-5">Welcome,  {{ (authService.user | async)?.email }} !</h1>
+          <h1 class="display-5">Welcome,  {{ (authService.user | async)?.email }}!</h1>
           <hr>
           <p class="lead">Thanks for being a <strong>beta tester!</strong> Bootstrap Machine is 100% free while we're in this phase so that 
-            we can get good feedback and grow.
+            we can get quality feedback and grow.
           </p>
-          <p>In the future, Bootstrap Machine plans to have a forever free account and an option to pay a small monthly fee for premium features as well. Our goal is to help peeople use Bootstrap to create better templates, from hobbyist to full time developers..</p>
-          <p >Bootstrap Machine's goal is to be your one-stop shop for everything Bootstrap, including a drag and drop template
+          <p>In the future, Bootstrap Machine will have both a free account option and a $9/month account option that gives you access to premium templates and elements in the drag & drop editor.</p>
+
+
+          <p >Bootstrap Machine's goal is to be a one-stop shop for hobbyists and full time developers alike, 
+            helping speed up custom template creation time, providing prebuilt typical templates, and maintaining a helpful resource list.</p>
+            
+            <!-- including a drag and drop template
             creator, premade templates for typical scenarios, and a resource hub full of the tools that we use in production for our day jobs- every single
             day.
-          </p>
-          <p >Contact us anytime at <a href="mailto:builtbycobrella@gmail.com">BuiltByCobrella@gmail.com</a></p>
+          </p> -->
+<p>Bootstrap Machine is built by web developers, and we use it everyday to speed up our production work.</p>
+          <!-- an option to pay a small monthly fee for premium features.
+           Our goal is to help peeople use Bootstrap to create better templates,
+            from hobbyist to full time developers.. -->
+
+          <p >Contact us anytime at <a href="mailto:hello@cobrella.io">hello@cobrella.io</a> <br>
+            Join the Bootstrap Machine subreddit at <a target="_blank" href="https://reddit.com/r/bootstrapmachine">r/bootstrapmachine</a></p>
 
           <hr>
           <p class="lead">
           Changelog:</p>
           <ul class="bg-dark text-light py-3 pr-3">
+              <li>11/26/17: Released version alpha 5 of the builder! Released the Legacy Launchpad! template</li>              
+              <li>11/24/17: Swapped login system to Google social auth, tested and set live</li>              
               <li>11/16/17: Released version alpha 1 of the builder! Updated resoures</li>              
               <li>11/05/17: Added <u><a class="text-light" href="/dashboard/gallery">gallery section</a></u> with first template - Launchpad!, reorganized codebase for faster future development, added new resources section - Free Stock Photos!</li>   
               <li>11/02/17: Added <u><a class="text-light" href="/dashboard/resources">resources section</a></u> with first 5 resources.</li>

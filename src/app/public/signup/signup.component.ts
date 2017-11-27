@@ -39,4 +39,10 @@ export class SignupComponent implements OnInit {
     // this.password = '';
     }
 
+    loginWithGithub() {
+      // alert("I worked!");
+      this.authService.loginWithGithub();
+      // this.password = '';
+      }
+
 }

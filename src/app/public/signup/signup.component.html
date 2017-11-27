@@ -51,10 +51,16 @@
                   <h3 class="" style="font-weight:400">Create Free Account</h3>
                   <hr>
                   
-                  <p>Bootstrap Machine currently supports sign ups via Google only in its beta phase. More signup options are coming soon.</p>
+                  <!-- <p>Bootstrap Machine currently supports sign ups via Google only in its beta phase. More signup options are coming soon.</p> -->
+                  
                   <button class="btn btn-lg btn-google btn-block mt-3" (click)="loginWithGoogle()">
                         <span class="fa fa-google mr-1"></span>
                       Signup with Google</button>
+
+                      <button class="btn btn-lg btn-dark btn-block mt-3 rounded-0" (click)="loginWithGithub()">
+                            <span class="fa fa-github mr-1"></span>
+                          Signup with Github</button>
+            
         
                   <!-- <form #formData='ngForm' (ngSubmit)="onSubmit()">
                     <label for="inputEmail" class="sr-only">Email address*</label>

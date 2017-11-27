@@ -34,5 +34,11 @@ export class LoginComponent implements OnInit {
       // this.password = '';
       }
 
+      loginWithGithub() {
+        // alert("I worked!");
+        this.authService.loginWithGithub();
+        // this.password = '';
+        }
+
 
 }
