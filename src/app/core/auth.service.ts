@@ -80,7 +80,10 @@ getCurrentUser(): any{
 
     return this.firebaseAuth.auth.signInWithRedirect(provider);
   }
-
+loginWithGoogle3(){
+  // this.firebaseAuth.auth.signInWithPopup(new firebase.auth.GoogleAuthProvider());
+  
+}
   loginWithGoogle2() {
     const provider = new firebase.auth.GoogleAuthProvider();
     
@@ -124,9 +127,9 @@ getCurrentUser(): any{
       const token = result.credential.accessToken;
       // The signed-in user info.
       const user = result.user;
-      console.log("token is " + token);
-      console.log("user is " + user);
-      // this.router.navigateByUrl('/dashboard');
+      // console.log("token is " + token);
+      // console.log("user is " + user);
+      this.router.navigateByUrl('/dashboard');
       
       // ...
     }).catch(error => {
@@ -148,6 +151,7 @@ getCurrentUser(): any{
 
   // login
   login(email: string, password: string) {
+    
     this.firebaseAuth.auth.signInWithEmailAndPassword(email, password).then(user => {
         //I THINK THIS IS WHAT IS FAILING!!! 
       if (user && user.emailVerified === true) {
