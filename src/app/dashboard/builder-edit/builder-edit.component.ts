@@ -8,56 +8,17 @@ import { DragulaService } from 'ng2-dragula/ng2-dragula';
 })
 export class DashboardBuilderEditComponent implements OnInit {
 
-  // @ViewChild('right') code;
-string: string;
-category: string = "Navbar";
-  // testhtml: any;
-  // @ViewChild('#testhtml') div: ElementRef;
+  string: string;
+  category: string = 'Navbar';
 
-  // @ViewChild('#testhtml', {read: ElementRef}) private div: ElementRef;
-  
-  
-//   constructor() { }
-
-//   ngOnInit() {
-//   }
-
-// }
-
-
-// import { Component, OnInit } from '@angular/core';
-
-
-// @Component({ ... })
-// export class AppComponent implements OnInit {
-  // msg = '';
-
-  // items = [
-  //   'Candlestick',
-  //   'Dagger',
-  //   'Revolver',
-  //   'Rope',
-  //   'Pipe',
-  //   'Wrench'
-  // ];
-
-  //   people = [
-  //   'Apple',
-  //   'Banana',
-  //   'Peach',
-  //   'Pear',
-  //   'Watermelon',
-  //   'Fish'
-  // ];
+  ngOnInit() {
+  }
 
   constructor(private dragula: DragulaService) {
 
     // private dragulaService: DragulaService
     dragula.setOptions('first-bag', {
       removeOnSpill: true,
-      
-      // copy: true,
-      // copySortSource: true,
       copy: function (el, source) {
         // To copy only elements in left container, the right container can still be sorted
         return source.id === 'left';
@@ -69,59 +30,37 @@ category: string = "Navbar";
       }
     });
 
-    // dragula.drop.subscribe((value) => {
-    //   this.onDrop(value.slice(1));
-    // });
-
     dragula.drop.subscribe((el) => {
-      // el.addClass('howdy');
      (el[1].childNodes[1].classList.add('howdy'));
-    //  console.log(el.slice(1));
-
-    //  const element = document.getElementById("div1");
-    //  element.classList.add("otherclass");
-      
-      // this.onDrop(value.slice(1));
+    //  el[1].innerHTML.toString().replace(/<div  class="">/g, '');
+     
     });
-
-
-    // dragula.setOptions('first-bag', {
-    //   copy: true,
-    //   copySortSource: true
-    // });
-
 
   }
 
   updateString() {
-    const elem: Element = document.getElementById("right");
+    const elem: Element = document.getElementById('right');
     this.string = elem.innerHTML.toString();
-    // string.replace('_ngcontent-c1', '');
 
-    //remove all _ngcontent instacnes
     this.string = this.string.replace(/_ngcontent-c[0-9]*=""/g, '');
-
-
-    // this.string = this.string.replace(/_ngcontent-c4="" /g, '');
-    
     this.string = this.string.replace(/<div  class="">/g, '');
-    // this.string = this.string.replace(/<app-element-navbar02  _nghost-c4="">/g, '');
-
-    // <app-element-column-halves  class="zoom howdy" _nghost-c8="">
 
     this.string = this.string.replace(/<app-element-(.*)  class="zoom howdy" _nghost-c[0-9]*="">/g, '');
+    this.string = this.string.replace(/<\/app-element-(.*)>/g, '');
+
+    this.string = this.string.replace(/  /g, ' ');
+
+    // <div class="END"></div>
+    // </div>
+    this.string = this.string.replace(/( )*<div class="START"><\/div>/g, '');
     
-this.string = this.string.replace(/<\/app-element-(.*)>/g, '');
-this.string = this.string.replace(/  /g, ' ');
-this.string = this.string.replace(/\n <\/div>\n   /g, '');
-this.string = this.string.replace(/\n <\/div>/g, '');
+    this.string = this.string.replace(/<div class="END"><\/div>\n( )*<\/div>/g, '');
 
-
-// this.string = this.string.replace(/\n   /g, '');
+    // this.string = this.string.replace(/\n <\/div>\n/g, '');
+    // this.string = this.string.replace(/\n\n<\/div>/g, '');
+    this.string = this.string.replace(/\n\n/g, '\n');
 
     this.string = this.string.trim();
-    
-    
   }
 
   update(value) {
@@ -143,39 +82,7 @@ this.string = this.string.replace(/\n <\/div>/g, '');
     
     alert(this.string);
     // alert((elem.innerHTML).replace('_ngcontent-c1=\"\"', ''));
-    console.log("a ok " + elem.innerHTML);
-    
-    
+    // console.log("a ok " + elem.innerHTML);
   }
 
-  // private onDrag(args) {
-  //   const [e, el] = args;
-  //   this.removeClass(e, 'ex-moved');
-  // }
-
-  ngOnInit() {
-    // this.dragula
-    //   .drag
-    //   .subscribe(value => {
-    //     this.msg = `Dragging the ${ value[1].innerText }!`;
-    //   });
-
-    // private onDrop(args) {
-    //   let [e, el] = args;
-    //   this.addClass(e, 'ex-moved');
-    // }
-
-    // this.dragula
-    //   .drop
-    //   .subscribe(value => {
-    //     // this.msg = `Dropped the ${ value[1].innerText }!`;
-    //     alert(value);
-    //     value.addClass('ex-moved');
-        
-
-    //     setTimeout(() => {
-    //       // this.msg = '';
-    //     }, 1000);
-    //   });
-  }
 }
