@@ -54,6 +54,9 @@ import { AngularFireModule } from 'angularfire2';
 import { environment } from '../environments/environment';
 import { AngularFireAuthModule } from 'angularfire2/auth';
 import { ToastrModule } from 'ngx-toastr';
+import { ClipboardModule } from 'ngx-clipboard';
+
+
 
 // dashboard components
 import { DashboardHomeComponent } from './dashboard/dashboard-home/dashboard-home.component';
@@ -106,11 +109,13 @@ import {DashboardBuilderEditComponent} from './dashboard/builder-edit/builder-ed
      AngularFireModule.initializeApp(environment.firebase),
     AngularFireAuthModule,
     FormsModule,
+    ClipboardModule,    
     routes,
     DragulaModule,
     AngularFontAwesomeModule,
     BrowserAnimationsModule,
-        ToastrModule.forRoot(), // ToastrModule added
+        // ToastrModule.forRoot(), // ToastrModule added
+
 
     // AngularFireModule.initializeApp(firebaseConfig)
   ],

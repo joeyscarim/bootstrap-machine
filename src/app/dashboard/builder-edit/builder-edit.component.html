@@ -14,15 +14,11 @@
                 
             <li class="nav-item">
               <a class="btn btn-bm-green btn-danger ml-2" routerLink="/dashboard">
-              <!-- <button type="button" (click)="updateString()" class="btn btn-bm-green btn-danger ml-2" data-toggle="modal" data-target="#exampleModal"> -->
                   <i class="fa fa-times mr-1" aria-hidden="true"></i>   
                 Exit
-                <!-- </button> -->
               </a>
             </li>
-            <!-- <li class="nav-item">
-              <a routerLink="/signup" class="btn btn-light">Join Free</a>
-            </li> -->
+
           </ul>
         <!-- </div> -->
       
@@ -75,23 +71,23 @@
 </div>
 
     <div *ngIf="category == 'Columns'">
-      <app-element-column-halves class="zoom"></app-element-column-halves>
+      <app-element-column-halves class="zoom" style="height:90px"></app-element-column-halves>
   </div>
 
   <div *ngIf="category == 'Columns'">
-    <app-element-column-thirds class="zoom"></app-element-column-thirds>
+    <app-element-column-thirds class="zoom" style="height:120px"></app-element-column-thirds>
 </div>
 
 <div *ngIf="category == 'Columns'">
-  <app-element-column-fourths class="zoom"></app-element-column-fourths>
+  <app-element-column-fourths class="zoom" style="height:150px"></app-element-column-fourths>
 </div>
 
 <div *ngIf="category == 'Columns'">
-  <app-element-column-third-fill class="zoom"></app-element-column-third-fill>
+  <app-element-column-third-fill class="zoom" style="height:100px"></app-element-column-third-fill>
 </div>
 
 <div *ngIf="category == 'Columns'">
-  <app-element-column-two-thirds-fill class="zoom"></app-element-column-two-thirds-fill>
+  <app-element-column-two-thirds-fill class="zoom" style="height:100px"></app-element-column-two-thirds-fill>
 </div>
 
 
@@ -141,16 +137,26 @@
     <div class="modal-content">
       <div class="modal-header">
         <h5 class="modal-title" id="exampleModalLabel">Your Code</h5>
+
+        <!-- <div class="input-group">
+          <input type="text" class="form-control" [(ngModel)]="text" placeholder="content will be copy after click the copy button">
+          <span class="input-group-btn">
+            <button class="btn btn-default" [class.btn-success]= "isCopied1" type="button" ngxClipboard [cbContent]="text" (cbOnSuccess)="isCopied1 = true">copy</button>
+          </span>
+        </div> -->
+
         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">&times;</span>
         </button>
       </div>
       <div class="modal-body">
-        <pre class="bg-dark text-white py-2 px-2 " style="max-height:500px">{{string}}</pre>
+        <pre id="outputCode" class="bg-dark text-white py-2 px-2 " style="max-height:500px">{{string}}</pre>
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-        <!-- <button type="button" class="btn btn-primary">Save changes</button> -->
+        <button  type="button" class="btn btn-primary" (click)="copyToClipboard()">Copy to Clipboard</button>
+        <button  type="button" class="btn btn-primary" (click)="toggleHead()">Toggle <\head></button>
+        
       </div>
     </div>
   </div>

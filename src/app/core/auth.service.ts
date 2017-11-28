@@ -3,7 +3,7 @@ import { AngularFireAuth } from 'angularfire2/auth';
 import * as firebase from 'firebase/app';
 import { Observable } from 'rxjs/Observable';
 import {CanActivate, Router} from '@angular/router';
-import { ToastrService } from 'ngx-toastr';
+// import { ToastrService } from 'ngx-toastr';
 // import swal from 'sweetalert';
 import * as swal from 'sweetalert';
 import { errorHandler } from '@angular/platform-browser/src/browser';
@@ -16,7 +16,7 @@ export class AuthService {
 // currentUserInstant: any;
 // quickCheck = 'MEOW';
 
-  constructor(private firebaseAuth: AngularFireAuth,  private router: Router, public toastr: ToastrService) {
+  constructor(private firebaseAuth: AngularFireAuth,  private router: Router) {
     this.user = firebaseAuth.authState;
     this.currentUser = firebaseAuth.auth.currentUser;
   }
