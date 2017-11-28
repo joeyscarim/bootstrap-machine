@@ -13,10 +13,10 @@
               </li>
                 
             <li class="nav-item">
-              <a class="btn btn-bm-green btn-danger ml-2" (click)="exitButton()">
+              <button type="button" class="btn btn-bm-green btn-danger ml-2" (click)="exitButton()">
                   <i class="fa fa-times mr-1" aria-hidden="true"></i>   
                 Exit
-              </a>
+              </button>
             </li>
 
           </ul>
@@ -47,11 +47,11 @@
 
 
         <div *ngIf="category == 'Navbar'">
-          <app-element-navbar01 class="zoom"></app-element-navbar01>
+          <app-element-navbar01 class="zoom" style="height:30px"></app-element-navbar01>
         </div>
 
         <div *ngIf="category == 'Navbar'">
-            <app-element-navbar02 class="zoom"></app-element-navbar02>
+            <app-element-navbar02 class="zoom" style="height:30px"></app-element-navbar02>
         </div>
 
         <div *ngIf="category == 'Footer'">
@@ -63,11 +63,11 @@
     </div>
 
     <div *ngIf="category == 'Jumbotron'">
-      <app-element-jumbotron01 class="zoom"></app-element-jumbotron01>
+      <app-element-jumbotron01 class="zoom" style="height:220px"></app-element-jumbotron01>
   </div>
 
   <div *ngIf="category == 'Jumbotron'">
-    <app-element-jumbotron02 class="zoom"></app-element-jumbotron02>
+    <app-element-jumbotron02 class="zoom" style="height:200px"></app-element-jumbotron02>
 </div>
 
     <div *ngIf="category == 'Columns'">
@@ -153,7 +153,7 @@
         <pre id="outputCode" class="bg-dark text-white py-2 px-2 " style="max-height:500px">{{string}}</pre>
       </div>
       <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        <!-- <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button> -->
         <button  type="button" class="btn btn-primary" (click)="copyToClipboard()">Copy to Clipboard</button>
         <button  type="button" class="btn btn-primary" (click)="toggleHead()">Toggle <\head></button>
         

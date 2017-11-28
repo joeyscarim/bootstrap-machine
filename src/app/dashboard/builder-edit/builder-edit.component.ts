@@ -59,7 +59,7 @@ export class DashboardBuilderEditComponent implements OnInit {
     window.getSelection().selectAllChildren( document.getElementById( 'outputCode' ) );
     document.execCommand('copy');
     window.getSelection().removeAllRanges();
-    swal('Copied!', 'Enjoy :)' , 'success');
+    swal('Copied!', 'Thank you for using Boostrap Machine!' , 'success');
   }
 
     toggleHead() {
