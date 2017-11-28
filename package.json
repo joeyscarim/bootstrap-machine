@@ -37,6 +37,7 @@
     "promise-polyfill": "6.0.2",
     "rxjs": "^5.4.1",
     "sweetalert": "^2.0.8",
+    "sweetalert2": "^7.0.5",
     "zone.js": "^0.8.14"
   },
   "devDependencies": {

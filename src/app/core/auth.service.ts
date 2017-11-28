@@ -5,7 +5,9 @@ import { Observable } from 'rxjs/Observable';
 import {CanActivate, Router} from '@angular/router';
 // import { ToastrService } from 'ngx-toastr';
 // import swal from 'sweetalert';
-import * as swal from 'sweetalert';
+// import * as swal from 'sweetalert';
+import swal from 'sweetalert2';
+
 import { errorHandler } from '@angular/platform-browser/src/browser';
 
 @Injectable()
