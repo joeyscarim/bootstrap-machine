@@ -39,6 +39,8 @@
           <option>Jumbotron</option>
           <option>Columns</option>
           <option>Footer</option>
+          <option>Image + Description</option>
+          
         </select>
 
  
@@ -96,6 +98,14 @@
 
 <div *ngIf="category == 'Columns'">
   <app-element-column-two-thirds-fill class="zoom" style="height:100px"></app-element-column-two-thirds-fill>
+</div>
+
+<div *ngIf="category == 'Image + Description'">
+  <app-element-image01 class="zoom" style="height:200px"></app-element-image01>
+</div>
+
+<div *ngIf="category == 'Image + Description'">
+  <app-element-image02 class="zoom" style="height:200px"></app-element-image02>
 </div>
 
 
