@@ -40,6 +40,11 @@ export class DashboardResourcesComponent implements OnInit {
     ['paint-brush', '#008c8c', 'Transparent Textures', 'Web friendly background textures', 'https://www.transparenttextures.com/'],
   ];
 
+  community = [
+    ['reddit', '#ff5520', 'r/bootstrapmachine', 'The Bootstrap Machine subreddit', 'https://www.reddit.com/r/boostrapmachine'],
+    ['reddit', '#ff5520', 'r/bootstrap', 'The Official Bootstrap subrebbit', 'https://reddit.com/r/bootstrap']
+  ];
+
   inspiration = [
     ['trophy', '#49c5b6', 'Awwwards', 'Best web design trends', 'https://www.awwwards.com'],
     ['camera', '#222222', 'Dribble', 'Show and tell for designers', 'https://dribbble.com/']

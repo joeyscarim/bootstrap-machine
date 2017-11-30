@@ -11,34 +11,17 @@
           <h3 class="" style="font-weight:400">Login</h3>
           <hr>
 
-          <!-- <p>Login with one of the social p</p> -->
           <button class="btn btn-lg btn-google btn-block mt-3" (click)="loginWithGoogle()">
-              <span class="fa fa-google mr-1"></span>
+            <span class="fa fa-google mr-1"></span>
             Login with Google</button>
 
-            <button class="btn btn-lg btn-dark btn-block mt-3 rounded-0" (click)="loginWithGithub()">
-                <span class="fa fa-github mr-1"></span>
-              Login with Github</button>
+          <button class="btn btn-lg btn-dark btn-block mt-3 rounded-0" (click)="loginWithGithub()" style="cursor:pointer">
+            <span class="fa fa-github mr-1"></span>
+            Login with Github</button>
 
-              <button class="btn btn-lg btn-dark btn-block mt-3 rounded-0" (click)="loginWithFacebook()">
-                <span class="fa fa-facebook mr-1"></span>
-              Login with Facebook</button>
-
-          <!-- <form #formData='ngForm' (ngSubmit)="onSubmit()">
-            <label for="inputEmail" class="sr-only">Email address</label>
-            <input type="email" [(ngModel)]="email" name="email" class="form-control mb-2 rounded-0" placeholder="Email" required autofocus>
-
-            <label for="inputPassword" class="sr-only">Password</label>
-            <input type="password" [(ngModel)]="password" name="password" class="form-control mb-2 rounded-0" placeholder="Password" required>
-            <button class="btn btn-lg btn-bm-green btn-block mt-3" type="submit">
-              Login
-            </button>
-          </form> -->
-
-          <!-- <hr> -->
-          <!-- <p class="text-center mb-0">
-          <a routerLink="/forgot-password" class="text-center text-dark">Forgot password?</a>
-            </p> -->
+          <button class="btn btn-lg btn-dark btn-block mt-3 rounded-0" style="background-color: #3B5998; border-color: #3B5998; cursor:pointer" (click)="loginWithFacebook()">
+            <span class="fa fa-facebook mr-1"></span>
+            Login with Facebook</button>
 
         </div>
         <footer class="text-dark text-center">Boostrap Machine. 2018.</footer>

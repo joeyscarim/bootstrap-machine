@@ -178,6 +178,24 @@
           </div>
         </div>
 
+        <h3>Community</h3>
+        <hr>
+        <div class="row mb-4">
+            <div class="col-md-12">
+              <div class="card w-100 mb-4" *ngFor="let item of community">
+                <div class="card-body">
+                  <h4 class="card-title">
+                    <i class="fa fa-{{item[0]}} mr-1" aria-hidden="true" [style.color]=item[1]></i>
+                    {{item[2]}}</h4>
+                  <p class="card-text">{{item[3]}}
+                      <a href="{{item[4]}}" target="_blank" class="btn btn-dark pull-right" style="    margin-top: -25px;">Visit Site
+                          <i class="fa fa-external-link-square ml-1" aria-hidden="true"></i>    
+                      </a>                </p>
+                </div>
+              </div>
+            </div>
+          </div>
+
         <h3>Inspiration</h3>
         <hr>
         <div class="row mb-4">

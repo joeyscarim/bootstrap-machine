@@ -33,3 +33,17 @@ hr {
     color: white;
     cursor:pointer;
 }
+
+.btn-facebook{
+    background-color: #3B5998;
+    border-radius:0px;
+    color: white;
+    cursor:pointer;
+}
+
+.btn-facebook:hover{
+    background-color: rgb(49, 75, 128);
+    border-radius:0px;
+    color: white;
+    cursor:pointer;
+}
