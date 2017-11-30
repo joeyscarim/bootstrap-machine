@@ -64,6 +64,21 @@ get currentUserObservable(): any {
     });
   }
 
+  loginWithFacebook() {
+    const provider = new firebase.auth.FacebookAuthProvider();
+
+    this.firebaseAuth.auth.signInWithPopup(provider).then(result => {
+      const token = result.credential.accessToken;
+      const user = result.user;
+    }).catch(error => {
+      const errorCode = error.code;
+      const errorMessage = error.message;
+      const email = error.email;
+      const credential = error.credential;
+      swal ( 'Error' ,  errorMessage ,  'error' );
+    });
+  }
+
   logout() {
     this.firebaseAuth.auth.signOut();
   }

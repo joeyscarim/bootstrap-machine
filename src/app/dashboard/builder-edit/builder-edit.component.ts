@@ -50,7 +50,7 @@ export class DashboardBuilderEditComponent implements OnInit {
       confirmButtonColor: '#d33',
     }).then((result) => {
       if (result.value) {
-        this.router.navigateByUrl('/dashboard/builder');
+        this.router.navigateByUrl('/dashboard');
       }
     });
   }

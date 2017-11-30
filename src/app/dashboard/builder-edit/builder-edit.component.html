@@ -54,6 +54,10 @@
             <app-element-navbar02 class="zoom" style="height:30px"></app-element-navbar02>
         </div>
 
+        <div *ngIf="category == 'Navbar'">
+          <app-element-navbar03 class="zoom" style="height:30px"></app-element-navbar03>
+      </div>
+
         <div *ngIf="category == 'Footer'">
           <app-element-footer01 class="zoom"></app-element-footer01>
       </div>
@@ -61,6 +65,10 @@
       <div *ngIf="category == 'Footer'">
         <app-element-footer02 class="zoom"></app-element-footer02>
     </div>
+
+    <div *ngIf="category == 'Footer'">
+      <app-element-footer03 class="zoom"></app-element-footer03>
+  </div>
 
     <div *ngIf="category == 'Jumbotron'">
       <app-element-jumbotron01 class="zoom" style="height:220px"></app-element-jumbotron01>
@@ -113,8 +121,11 @@
       TO VIEW & COPY YOUR CODE</h2>
 </div> -->
 
- <div style="    height: -webkit-fill-available;       
- " class="bg-white mt-3" [dragula]='"first-bag"' id='right' >
+ <div style="    min-height: 200px;
+ height: 100%;
+ border: 1px dashed #e6e6e6;
+ margin-bottom: 3em;      
+ " class="bg-white mt-3 editorArea" [dragula]='"first-bag"' id='right' >
         <!-- <div>Top of page</div> -->
 
       </div>

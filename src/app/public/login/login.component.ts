@@ -19,17 +19,21 @@ export class LoginComponent implements OnInit {
         this.router.navigateByUrl('/dashboard');
       }
     });
-   }
+  }
 
-  ngOnInit() {}
-    
-    loginWithGoogle() {
-      this.authService.loginWithGoogle();
-      }
+  ngOnInit() { }
 
-      loginWithGithub() {
-        this.authService.loginWithGithub();
-        }
+  loginWithGoogle() {
+    this.authService.loginWithGoogle();
+  }
+
+  loginWithGithub() {
+    this.authService.loginWithGithub();
+  }
+
+  loginWithFacebook() {
+    this.authService.loginWithFacebook();
+  }
 
 
 }

@@ -32,4 +32,8 @@ export class SignupComponent implements OnInit {
       this.authService.loginWithGithub();
       }
 
+      loginWithFacebook() {
+        this.authService.loginWithFacebook();
+        }
+
 }
