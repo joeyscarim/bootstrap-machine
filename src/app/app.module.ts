@@ -27,6 +27,9 @@ import { Template02Component } from './gallery/02-Legacy/template02.component';
 import { ElementNavbar01Component } from './elements/navbars/navbar01/navbar01.component';
 import { ElementNavbar02Component } from './elements/navbars/navbar02/navbar02.component';
 import { ElementNavbar03Component } from './elements/navbars/navbar03/navbar03.component';
+import { ElementNavbar04Component } from './elements/navbars/navbar04/navbar04.component';
+import { ElementNavbar05Component } from './elements/navbars/navbar05/navbar05.component';
+import { ElementNavbar06Component } from './elements/navbars/navbar06/navbar06.component';
 
 import { ElementFooter01Component } from './elements/footers/footer01/footer01.component';
 import { ElementFooter02Component } from './elements/footers/footer02/footer02.component';
@@ -102,6 +105,9 @@ import { DashboardBuilderEditComponent } from './dashboard/builder-edit/builder-
     ElementNavbar01Component,
     ElementNavbar02Component,
     ElementNavbar03Component,
+    ElementNavbar04Component,
+    ElementNavbar05Component,
+    ElementNavbar06Component,
 
     ElementFooter01Component,
     ElementFooter02Component,
