@@ -41,7 +41,7 @@ export class DashboardResourcesComponent implements OnInit {
   ];
 
   community = [
-    ['reddit', '#ff5520', 'r/bootstrapmachine', 'The Bootstrap Machine subreddit', 'https://www.reddit.com/r/boostrapmachine'],
+    ['reddit', '#ff5520', 'r/bootstrapmachine', 'The Bootstrap Machine subreddit', 'https://www.reddit.com/r/bootstrapmachine'],
     ['reddit', '#ff5520', 'r/bootstrap', 'The Official Bootstrap subrebbit', 'https://reddit.com/r/bootstrap']
   ];
 

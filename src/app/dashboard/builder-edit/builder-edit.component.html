@@ -161,6 +161,11 @@
  margin-bottom: 3em;      
  " class="bg-white mt-3 editorArea" [dragula]='"first-bag"' id='right'>
 
+ <!-- <app-element-navbar01 class="zoom howdy" style="height:30px"></app-element-navbar01> -->
+ <app-element-video01 class="zoom howdy" style="height:285px"></app-element-video01>
+ 
+ 
+
       </div>
     </div>
 
@@ -182,7 +187,8 @@
         </button>
       </div>
       <div class="modal-body">
-        <pre id="outputCode" class="bg-dark text-white py-2 px-2 " style="max-height:500px">{{string}}</pre>
+        <pre id="outputCode" class="bg-dark text-white py-2 px-2 " style="max-height:475px">{{string}}</pre>
+        <p class="mb-0">Video embeds use the css from <a href="http://embedresponsively.com/" target="_blank">Embed Responively</a></p>        
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-primary" (click)="copyToClipboard()">Copy to Clipboard</button>
