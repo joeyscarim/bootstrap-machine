@@ -1,168 +1,174 @@
-  <!-- <app-navbar></app-navbar> -->
-  <header>
-      <nav class="navbar navbar-expand-lg fixed-top navbar-dark bg-faded" style="background-color: #34495e;    padding: 15px;">
-        <div class="navbar-brand">Bootstrap <strong>Machine</strong></div>
-        
-      
-        <!-- <div *ngIf="(authService.user | async)" id="navbarNavDropdown" class="navbar-collapse collapse"> -->
-          <ul class="navbar-nav ml-auto">
-            <li class="nav-item">
-              <button type="button" (click)="updateString()" class="btn btn-bm-green" data-toggle="modal" data-target="#exampleModal">
-                  <i class="fa fa-file-code-o mr-1" aria-hidden="true"></i> View Code
-                </button>
-              </li>
-                
-            <li class="nav-item">
-              <button type="button" class="btn btn-bm-green btn-danger ml-2" (click)="exitButton()">
-                  <i class="fa fa-times mr-1" aria-hidden="true"></i>   
-                Exit
-              </button>
-            </li>
+<header>
+  <nav class="navbar navbar-expand-lg fixed-top navbar-dark bg-faded" style="background-color: #34495e;    padding: 15px;">
+    <div class="navbar-brand">Bootstrap
+      <strong>Machine</strong>
+    </div>
+    <ul class="navbar-nav ml-auto">
+      <li class="nav-item">
+        <button type="button" (click)="updateString()" class="btn btn-bm-green" data-toggle="modal" data-target="#exampleModal">
+          <i class="fa fa-file-code-o mr-1" aria-hidden="true"></i> View Code
+        </button>
+      </li>
+      <li class="nav-item">
+        <button type="button" class="btn btn-bm-green btn-bm-red ml-2" (click)="exitButton()">
+          <i class="fa fa-times mr-1" aria-hidden="true"></i>
+          Exit
+        </button>
+      </li>
+    </ul>
+  </nav>
+</header>
 
-          </ul>
-        <!-- </div> -->
-      
-      <!-- <p class="ml-auto text-light" *ngIf="authService.user | async">Welcome {{ (authService.user | async)?.email }}!</p> -->
-      </nav>
-      </header>
-      
+<div class="container-fluid" style="margin-top:56px">
+  <div class="row">
 
-  <div class="container-fluid" style="margin-top:56px">
-  	<div class="row">
+    <div class="col-md-3 bg-light pt-3 sidebar" style="    background-color: #ecf0f1!important;">
+      <select class="custom-select mb-3" [(ngModel)]="category" style="    border-radius: 0px;">
+        <option>Navbar</option>
+        <option>Jumbotron</option>
+        <option>Video</option>
+        <option>Image + Description</option>
+        <option>Columns</option>
+        <!-- <option>Pricing Table</option> -->
+        <option>Call to Action</option>
+        <option>Footer</option>
+      </select>
 
-	<div class="col-md-3 bg-light pt-3 sidebar">
-    
-  
-
-      <select  class="custom-select mb-3" [(ngModel)]="category">
-          <option>Navbar</option>
-          <option>Jumbotron</option>
-          <option>Columns</option>
-          <option>Footer</option>
-          <option>Image + Description</option>
-          
-        </select>
-
- 
-
-    <div  [dragula]='"first-bag"' id='left'>
-
+      <div [dragula]='"first-bag"' id='left'>
 
         <div *ngIf="category == 'Navbar'">
           <app-element-navbar01 class="zoom" style="height:30px"></app-element-navbar01>
         </div>
 
         <div *ngIf="category == 'Navbar'">
-            <app-element-navbar02 class="zoom" style="height:30px"></app-element-navbar02>
+          <app-element-navbar02 class="zoom" style="height:30px"></app-element-navbar02>
         </div>
 
         <div *ngIf="category == 'Navbar'">
           <app-element-navbar03 class="zoom" style="height:30px"></app-element-navbar03>
-      </div>
+        </div>
 
-      <div *ngIf="category == 'Navbar'">
-        <app-element-navbar04 class="zoom" style="height:30px"></app-element-navbar04>
-      </div>
+        <div *ngIf="category == 'Navbar'">
+          <app-element-navbar04 class="zoom" style="height:30px"></app-element-navbar04>
+        </div>
 
-      <div *ngIf="category == 'Navbar'">
+        <div *ngIf="category == 'Navbar'">
           <app-element-navbar05 class="zoom" style="height:30px"></app-element-navbar05>
-      </div>
+        </div>
 
-      <div *ngIf="category == 'Navbar'">
-        <app-element-navbar06 class="zoom" style="height:30px"></app-element-navbar06>
-    </div>
+        <div *ngIf="category == 'Navbar'">
+          <app-element-navbar06 class="zoom" style="height:30px"></app-element-navbar06>
+        </div>
 
         <div *ngIf="category == 'Footer'">
-          <app-element-footer01 class="zoom"></app-element-footer01>
+          <app-element-footer01 class="zoom" style="height:30px"></app-element-footer01>
+        </div>
+
+        <div *ngIf="category == 'Footer'">
+          <app-element-footer02 class="zoom" style="height:30px"></app-element-footer02>
+        </div>
+
+        <div *ngIf="category == 'Footer'">
+          <app-element-footer03 class="zoom" style="height:125px"></app-element-footer03>
+        </div>
+
+        <div *ngIf="category == 'Footer'">
+          <app-element-footer04 class="zoom" style="height:125px"></app-element-footer04>
+        </div>
+
+        <div *ngIf="category == 'Jumbotron'">
+          <app-element-jumbotron01 class="zoom" style="height:220px"></app-element-jumbotron01>
+        </div>
+
+        <div *ngIf="category == 'Jumbotron'">
+          <app-element-jumbotron02 class="zoom" style="height:200px"></app-element-jumbotron02>
+        </div>
+
+        <!-- <div *ngIf="category == 'Jumbotron'">
+          <app-element-jumbotron03 class="zoom" style="height:200px"></app-element-jumbotron03>
+        </div> -->
+
+        <div *ngIf="category == 'Columns'">
+          <app-element-column-halves class="zoom" style="height:90px"></app-element-column-halves>
+        </div>
+
+        <div *ngIf="category == 'Columns'">
+          <app-element-column-thirds class="zoom" style="height:120px"></app-element-column-thirds>
+        </div>
+
+        <div *ngIf="category == 'Columns'">
+          <app-element-column-fourths class="zoom" style="height:150px"></app-element-column-fourths>
+        </div>
+
+        <div *ngIf="category == 'Columns'">
+          <app-element-column-third-fill class="zoom" style="height:100px"></app-element-column-third-fill>
+        </div>
+
+        <div *ngIf="category == 'Columns'">
+          <app-element-column-two-thirds-fill class="zoom" style="height:100px"></app-element-column-two-thirds-fill>
+        </div>
+
+        <div *ngIf="category == 'Image + Description'">
+          <app-element-image01 class="zoom" style="height:175px"></app-element-image01>
+        </div>
+
+        <div *ngIf="category == 'Image + Description'">
+          <app-element-image02 class="zoom" style="height:175px"></app-element-image02>
+        </div>
+
+        <div *ngIf="category == 'Pricing Table'">
+          <app-element-pricing01 class="zoom" style="height:200px"></app-element-pricing01>
+        </div>
+
+        <div *ngIf="category == 'Pricing Table'">
+          <app-element-pricing02 class="zoom" style="height:200px"></app-element-pricing02>
+        </div>
+
+        <div *ngIf="category == 'Pricing Table'">
+          <app-element-pricing03 class="zoom" style="height:200px"></app-element-pricing03>
+        </div>
+
+        <div *ngIf="category == 'Video'">
+          <app-element-video01 class="zoom" style="height:285px"></app-element-video01>
+        </div>
+
+        <div *ngIf="category == 'Video'">
+          <app-element-video02 class="zoom" style="height:150px"></app-element-video02>
+        </div>
+
+        <div *ngIf="category == 'Video'">
+          <app-element-video03 class="zoom" style="height:150px"></app-element-video03>
+        </div>
+
+        <div *ngIf="category == 'Call to Action'">
+          <app-element-cta01 class="zoom" style="height:150px"></app-element-cta01>
+        </div>
+
+        <div *ngIf="category == 'Call to Action'">
+            <app-element-cta02 class="zoom" style="height:150px"></app-element-cta02>
+          </div>
+
       </div>
 
-      <div *ngIf="category == 'Footer'">
-        <app-element-footer02 class="zoom"></app-element-footer02>
     </div>
 
-    <div *ngIf="category == 'Footer'">
-      <app-element-footer03 class="zoom"></app-element-footer03>
-  </div>
 
-    <div *ngIf="category == 'Jumbotron'">
-      <app-element-jumbotron01 class="zoom" style="height:220px"></app-element-jumbotron01>
-  </div>
+    <div class="col-md-9 ml-md-auto pt-3">
 
-  <div *ngIf="category == 'Jumbotron'">
-    <app-element-jumbotron02 class="zoom" style="height:200px"></app-element-jumbotron02>
-</div>
-
-    <div *ngIf="category == 'Columns'">
-      <app-element-column-halves class="zoom" style="height:90px"></app-element-column-halves>
-  </div>
-
-  <div *ngIf="category == 'Columns'">
-    <app-element-column-thirds class="zoom" style="height:120px"></app-element-column-thirds>
-</div>
-
-<div *ngIf="category == 'Columns'">
-  <app-element-column-fourths class="zoom" style="height:150px"></app-element-column-fourths>
-</div>
-
-<div *ngIf="category == 'Columns'">
-  <app-element-column-third-fill class="zoom" style="height:100px"></app-element-column-third-fill>
-</div>
-
-<div *ngIf="category == 'Columns'">
-  <app-element-column-two-thirds-fill class="zoom" style="height:100px"></app-element-column-two-thirds-fill>
-</div>
-
-<div *ngIf="category == 'Image + Description'">
-  <app-element-image01 class="zoom" style="height:200px"></app-element-image01>
-</div>
-
-<div *ngIf="category == 'Image + Description'">
-  <app-element-image02 class="zoom" style="height:200px"></app-element-image02>
-</div>
-
-
-
-      </div>
-
-
-
-	</div>
-
-
-	<div class="col-md-9 ml-md-auto pt-3">
-
-<!-- <div class="mt-3">
-    <h2 class="welcome-text">WELCOME TO THE DRAG & DROP TEMPLATE BUILDER <i class="fa fa-exclamation" aria-hidden="true"></i>
-    </h2>
-    <h2 class="welcome-text">DRAG ELEMENTS RIGHT HERE <i class="fa fa-arrow-circle-up" aria-hidden="true"></i>
-      TO ADD THEM TO YOUR TEMPLATE</h2>
-    
-    <h2 class="welcome-text"><i class="fa fa-arrow-circle-left" aria-hidden="true"></i>
-      CHANGE THE CATEGORY TO VIEW DIFFERENT ELEMENTS</h2>
-    <h2 class="welcome-text">PRESS VIEW CODE  <i class="fa fa-file-code-o ml-1" aria-hidden="true"></i>
-      TO VIEW & COPY YOUR CODE</h2>
-</div> -->
-
- <div style="    min-height: 200px;
+      <div style="    min-height: 200px;
  height: 100%;
  border: 1px dashed #e6e6e6;
  margin-bottom: 3em;      
- " class="bg-white mt-3 editorArea" [dragula]='"first-bag"' id='right' >
-        <!-- <div>Top of page</div> -->
+ " class="bg-white mt-3 editorArea" [dragula]='"first-bag"' id='right'>
 
       </div>
-	</div>
-
-    </div>
-    <div>
     </div>
 
   </div>
+  <div>
+  </div>
 
-  <!-- {{string}} -->
-
-  <!-- Button trigger modal -->
-
+</div>
 
 <!-- Modal -->
 <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
@@ -170,13 +176,6 @@
     <div class="modal-content">
       <div class="modal-header">
         <h5 class="modal-title" id="exampleModalLabel">Your Code</h5>
-
-        <!-- <div class="input-group">
-          <input type="text" class="form-control" [(ngModel)]="text" placeholder="content will be copy after click the copy button">
-          <span class="input-group-btn">
-            <button class="btn btn-default" [class.btn-success]= "isCopied1" type="button" ngxClipboard [cbContent]="text" (cbOnSuccess)="isCopied1 = true">copy</button>
-          </span>
-        </div> -->
 
         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">&times;</span>
@@ -186,12 +185,12 @@
         <pre id="outputCode" class="bg-dark text-white py-2 px-2 " style="max-height:500px">{{string}}</pre>
       </div>
       <div class="modal-footer">
-        <!-- <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button> -->
-        <button  type="button" class="btn btn-primary" (click)="copyToClipboard()">Copy to Clipboard</button>
-        <button  type="button" class="btn btn-primary" (click)="toggleHead()">Toggle <\head></button>
-        
+        <button type="button" class="btn btn-primary" (click)="copyToClipboard()">Copy to Clipboard</button>
+        <button type="button" class="btn btn-primary" (click)="toggleHead()">Toggle
+          <\head>
+        </button>
+
       </div>
     </div>
   </div>
 </div>
-  

@@ -97,7 +97,19 @@ padding:10px;
     font-size: 50px;
     color: #e6e6e6;
     bottom: 0;
-    left: 45%;
+    left: 48%;
     display: block;
     margin-bottom: -22px;
   }
+
+.btn-bm-red{
+    background-color: #e74c3c;
+    border-color: #e74c3c !important;
+}
+
+.bt-bm-red:hover{
+    background-color: #c0392b !important;
+}
+
+
+  

@@ -34,6 +34,7 @@ import { ElementNavbar06Component } from './elements/navbars/navbar06/navbar06.c
 import { ElementFooter01Component } from './elements/footers/footer01/footer01.component';
 import { ElementFooter02Component } from './elements/footers/footer02/footer02.component';
 import { ElementFooter03Component } from './elements/footers/footer03/footer03.component';
+import { ElementFooter04Component } from './elements/footers/footer04/footer04.component';
 
 import { ElementPricing01Component } from './elements/pricing-tables/pricing01/pricing01.component';
 import { ElementPricing02Component } from './elements/pricing-tables/pricing02/pricing02.component';
@@ -43,9 +44,15 @@ import { ElementImage01Component } from './elements/image/image01/image01.compon
 import { ElementImage02Component } from './elements/image/image02/image02.component';
 
 import { ElementCta01Component } from './elements/ctas/cta01/cta01.component';
+import { ElementCta02Component } from './elements/ctas/cta02/cta02.component';
 
 import { ElementJumbotron01Component } from './elements/jumbotrons/jumbotron01/jumbotron01.component';
 import { ElementJumbotron02Component } from './elements/jumbotrons/jumbotron02/jumbotron02.component';
+import { ElementJumbotron03Component } from './elements/jumbotrons/jumbotron03/jumbotron03.component';
+
+import { ElementVideo01Component } from './elements/videos/video01/video01.component';
+import { ElementVideo02Component } from './elements/videos/video02/video02.component';
+import { ElementVideo03Component } from './elements/videos/video03/video03.component';
 
 import { ElementColumnHalvesComponent } from './elements/columns/column-halves/column-halves.component';
 import { ElementColumnThirdsComponent } from './elements/columns/column-thirds/column-thirds.component';
@@ -112,17 +119,24 @@ import { DashboardBuilderEditComponent } from './dashboard/builder-edit/builder-
     ElementFooter01Component,
     ElementFooter02Component,
     ElementFooter03Component,
-
+    ElementFooter04Component,
+    
     ElementPricing01Component,
     ElementPricing02Component,
     ElementPricing03Component,
 
-    ElementCta01Component,
+    ElementVideo01Component,
+    ElementVideo02Component,
+    ElementVideo03Component,
 
+    ElementCta01Component,
+    ElementCta02Component,
+    
     ElementJumbotron01Component,
     ElementJumbotron02Component,
+    ElementJumbotron03Component,
+    
     ElementColumnHalvesComponent,
-
     ElementColumnThirdsComponent,
     ElementColumnFourthsComponent,
     ElementColumnThirdFillComponent,
