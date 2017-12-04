@@ -23,6 +23,28 @@
             <span class="fa fa-facebook mr-1"></span>
             Login with Facebook</button>
 
+            <hr>
+
+            <form #formData='ngForm' (ngSubmit)="onSubmit()">
+                <label for="inputEmail" class="sr-only">Email address*</label>
+                <input type="email" [(ngModel)]="email" name="email" class="form-control mb-2 rounded-0" placeholder="Email*" required autofocus>
+    
+    
+                <label for="inputPassword" class="sr-only">Password</label>
+                <input type="password" [(ngModel)]="password" name="password" class="form-control mb-2 rounded-0" placeholder="Password*"
+                  required>
+                <button class="btn btn-lg btn-bm-green btn-block mt-3" type="submit">
+                  <span class="fa fa-envelope mr-1"></span>
+    
+                  Login with Email
+                </button>
+              </form>
+    
+              <p class="text-center mb-0 mt-2" style="font-size:12px">
+                <a routerLink="/forgot-password" class="text-center text-dark">Forgot password?</a>
+              </p>
+    
+
         </div>
         <footer class="text-dark text-center">Boostrap Machine. 2018.</footer>
 
