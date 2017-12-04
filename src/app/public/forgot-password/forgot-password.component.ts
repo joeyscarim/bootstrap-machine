@@ -24,7 +24,7 @@ export class ForgotPasswordComponent implements OnInit {
 
   onSubmit() {
     // this.authService.sendForgotPasswordEmail(this.email);
-    // this.email = '';
+    this.email = '';
     }
 
 }

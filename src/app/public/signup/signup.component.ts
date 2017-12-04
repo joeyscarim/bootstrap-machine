@@ -36,8 +36,9 @@ export class SignupComponent implements OnInit {
         this.authService.loginWithFacebook();
         }
 
-        onSubmit(){
-          
+        onSubmit() {
+          this.authService.signup(this.email, this.password);
+          this.password = this.email = '';
         }
 
 }

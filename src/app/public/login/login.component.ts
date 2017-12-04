@@ -35,5 +35,9 @@ export class LoginComponent implements OnInit {
     this.authService.loginWithFacebook();
   }
 
+  onSubmit() {
+    this.authService.login(this.email, this.password);
+    this.password = '';
+    }
 
 }

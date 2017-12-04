@@ -2,12 +2,8 @@ import { Injectable } from '@angular/core';
 import { AngularFireAuth } from 'angularfire2/auth';
 import * as firebase from 'firebase/app';
 import { Observable } from 'rxjs/Observable';
-import {CanActivate, Router} from '@angular/router';
-// import { ToastrService } from 'ngx-toastr';
-// import swal from 'sweetalert';
-// import * as swal from 'sweetalert';
+import { CanActivate, Router } from '@angular/router';
 import swal from 'sweetalert2';
-
 import { errorHandler } from '@angular/platform-browser/src/browser';
 
 @Injectable()
@@ -15,24 +11,20 @@ export class AuthService {
 
   user: Observable<firebase.User>;
   currentUser: any;
-// currentUserInstant: any;
-// quickCheck = 'MEOW';
 
-  constructor(private firebaseAuth: AngularFireAuth,  private router: Router) {
+  constructor(private firebaseAuth: AngularFireAuth, private router: Router) {
     this.user = firebaseAuth.authState;
     this.currentUser = firebaseAuth.auth.currentUser;
   }
 
   // Returns true if user is logged in
-get authenticated(): boolean {
-  return this.currentUser !== null;
-}
+  get authenticated(): boolean {
+    return this.currentUser !== null;
+  }
 
-get currentUserObservable(): any {
-  return this.user;
-}
-
-
+  get currentUserObservable(): any {
+    return this.user;
+  }
 
   loginWithGoogle() {
     const provider = new firebase.auth.GoogleAuthProvider();
@@ -41,11 +33,11 @@ get currentUserObservable(): any {
       const token = result.credential.accessToken;
       const user = result.user;
     }).catch(error => {
-          const errorCode = error.code;
-          const errorMessage = error.message;
-          const email = error.email;
-          const credential = error.credential;
-          swal ( 'Error' ,  errorMessage ,  'error' );
+      const errorCode = error.code;
+      const errorMessage = error.message;
+      const email = error.email;
+      const credential = error.credential;
+      swal('Error', errorMessage, 'error');
     });
   }
 
@@ -60,7 +52,7 @@ get currentUserObservable(): any {
       const errorMessage = error.message;
       const email = error.email;
       const credential = error.credential;
-      swal ( 'Error' ,  errorMessage ,  'error' );
+      swal('Error', errorMessage, 'error');
     });
   }
 
@@ -75,8 +67,41 @@ get currentUserObservable(): any {
       const errorMessage = error.message;
       const email = error.email;
       const credential = error.credential;
-      swal ( 'Error' ,  errorMessage ,  'error' );
+      swal('Error', errorMessage, 'error');
     });
+  }
+
+  // signup a new user. this calls login automatically
+  signup(email: string, password: string) {
+    this.firebaseAuth.auth.createUserWithEmailAndPassword(email, password).then(result => {
+      const token = result.credential.accessToken;
+      const user = result.user;
+    }).catch(err => {
+      swal('Error', err.message, 'error');
+    });
+  }
+
+  // login
+  login(email: string, password: string) {
+    this.firebaseAuth.auth.signInWithEmailAndPassword(email, password).then(result => {
+      const token = result.credential.accessToken;
+      const user = result.user;
+    })
+      .catch(err => {
+        swal('Error', err.message, 'error');
+      });
+  }
+
+  updatePassword(newPassword: string, newPasswordAgain: string) {
+    if (newPassword === newPasswordAgain) {
+      this.firebaseAuth.auth.currentUser.updatePassword(newPassword).then(value => {
+        swal('Success', 'Password updated!', 'success');
+      }).catch(err => {
+        swal('Error', err.message, 'error');
+      });
+    } else {
+      swal('Error', 'Passowords don\'t match!', 'error');
+    }
   }
 
   logout() {
