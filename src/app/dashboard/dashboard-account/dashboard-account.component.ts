@@ -11,7 +11,7 @@ export class DashboardAccountComponent implements OnInit {
   newPassword: string;
   newPasswordAgain: string;
 
-  constructor(private authService: AuthService) { }
+  constructor(public authService: AuthService) { }
 
   ngOnInit() {
   }

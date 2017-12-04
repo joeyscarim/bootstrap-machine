@@ -23,7 +23,7 @@ export class ForgotPasswordComponent implements OnInit {
   ngOnInit() {}
 
   onSubmit() {
-    // this.authService.sendForgotPasswordEmail(this.email);
+    this.authService.sendForgotPasswordEmail(this.email);
     this.email = '';
     }
 

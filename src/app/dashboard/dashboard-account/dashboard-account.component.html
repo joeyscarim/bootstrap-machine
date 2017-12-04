@@ -9,6 +9,7 @@
       
       <p class="lead mb-4">Manage and update your account settings.</p>
 
+      <div *ngIf="authService.accessToken == null">
       <h3><i class="fa fa-lock" aria-hidden="true"></i>
          Update Password</h3>
       <hr>
@@ -39,6 +40,7 @@
             </form>
       </div>
       </div> 
+    </div>
 
       <h3>🎉 Go Premium</h3>
       <hr>

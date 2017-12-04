@@ -11,6 +11,7 @@ export class AuthService {
 
   user: Observable<firebase.User>;
   currentUser: any;
+  accessToken: any;
 
   constructor(private firebaseAuth: AngularFireAuth, private router: Router) {
     this.user = firebaseAuth.authState;
@@ -26,12 +27,18 @@ export class AuthService {
     return this.user;
   }
 
+  get currentAccessToken(): any {
+    return this.accessToken;
+  }
+
   loginWithGoogle() {
     const provider = new firebase.auth.GoogleAuthProvider();
 
     this.firebaseAuth.auth.signInWithPopup(provider).then(result => {
       const token = result.credential.accessToken;
       const user = result.user;
+      this.accessToken = token;
+      
     }).catch(error => {
       const errorCode = error.code;
       const errorMessage = error.message;
@@ -47,6 +54,7 @@ export class AuthService {
     this.firebaseAuth.auth.signInWithPopup(provider).then(result => {
       const token = result.credential.accessToken;
       const user = result.user;
+      this.accessToken = token;
     }).catch(error => {
       const errorCode = error.code;
       const errorMessage = error.message;
@@ -62,6 +70,8 @@ export class AuthService {
     this.firebaseAuth.auth.signInWithPopup(provider).then(result => {
       const token = result.credential.accessToken;
       const user = result.user;
+      this.accessToken = token;
+      
     }).catch(error => {
       const errorCode = error.code;
       const errorMessage = error.message;
@@ -74,7 +84,6 @@ export class AuthService {
   // signup a new user. this calls login automatically
   signup(email: string, password: string) {
     this.firebaseAuth.auth.createUserWithEmailAndPassword(email, password).then(result => {
-      const token = result.credential.accessToken;
       const user = result.user;
     }).catch(err => {
       swal('Error', err.message, 'error');
@@ -84,7 +93,6 @@ export class AuthService {
   // login
   login(email: string, password: string) {
     this.firebaseAuth.auth.signInWithEmailAndPassword(email, password).then(result => {
-      const token = result.credential.accessToken;
       const user = result.user;
     })
       .catch(err => {
@@ -102,6 +110,14 @@ export class AuthService {
     } else {
       swal('Error', 'Passowords don\'t match!', 'error');
     }
+  }
+
+  sendForgotPasswordEmail(email: string) {
+    this.firebaseAuth.auth.sendPasswordResetEmail(email).then(value => {
+      swal('Success', 'Password reset email sent!', 'success');
+    }).catch(err => {
+      swal('Error', err.message, 'error');
+    });
   }
 
   logout() {
