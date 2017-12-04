@@ -99,7 +99,7 @@ export class DashboardBuilderEditComponent implements OnInit {
 
     this.string = this.string.replace(/_ngcontent-c[0-9]*=""/g, '');
     this.string = this.string.replace(/<div  class="">/g, '');
-
+    
     this.string = this.string.replace(/<app-element-(.*)  class="zoom howdy" style="height:[0-9]*px" _nghost-c[0-9]*="">/g, '');
     this.string = this.string.replace(/<app-element-(.*)  class="zoom howdy" _nghost-c[0-9]*="">/g, '');
 
