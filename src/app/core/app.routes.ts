@@ -21,12 +21,12 @@ import { Template02Component } from './../gallery/02-Legacy/template02.component
 import { AuthGuard } from './auth.guard';
 
 // dashboard
-import { DashboardHomeComponent } from './../dashboard/dashboard-home/dashboard-home.component';
-import {DashboardResourcesComponent} from './../dashboard/dashboard-resources/dashboard-resources.component';
-import {DashboardBuilderComponent} from './../dashboard/dashboard-builder/dashboard-builder.component';
-import {DashboardGalleryComponent} from './../dashboard/dashboard-gallery/dashboard-gallery.component';
-import {DashboardAccountComponent} from './../dashboard/dashboard-account/dashboard-account.component';
-import {DashboardBuilderEditComponent} from './../dashboard/builder-edit/builder-edit.component';
+import { DashboardHomeComponent } from './../dashboard/home/home.component';
+import {DashboardResourcesComponent} from './../dashboard/resources/resources.component';
+import {DashboardBuilderComponent} from './../dashboard/builder/builder.component';
+import {DashboardGalleryComponent} from './../dashboard/gallery/gallery.component';
+import {DashboardAccountComponent} from './../dashboard/account/account.component';
+import {DashboardBuilderEditComponent} from './../dashboard/edit/edit.component';
 
 export const router: Routes = [
 

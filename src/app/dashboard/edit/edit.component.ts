@@ -6,8 +6,8 @@ import swal from 'sweetalert2';
 
 @Component({
   selector: 'app-dashboard-builder-edit',
-  templateUrl: './builder-edit.component.html',
-  styleUrls: ['./builder-edit.component.css']
+  templateUrl: './edit.component.html',
+  styleUrls: ['./edit.component.css']
 })
 export class DashboardBuilderEditComponent implements OnInit {
 

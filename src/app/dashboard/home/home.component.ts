@@ -3,8 +3,8 @@ import { AuthService } from './../../core/auth.service';
 
 @Component({
   selector: 'app-dashboard-home',
-  templateUrl: './dashboard-home.component.html',
-  styleUrls: ['./dashboard-home.component.css']
+  templateUrl: './home.component.html',
+  styleUrls: ['./home.component.css']
 })
 export class DashboardHomeComponent implements OnInit {
 
