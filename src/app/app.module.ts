@@ -83,6 +83,8 @@ import { DashboardGalleryComponent } from './dashboard/gallery/gallery.component
 import { DashboardAccountComponent } from './dashboard/account/account.component';
 import { DashboardBuilderEditComponent } from './dashboard/edit/edit.component';
 
+// const storage = firebase.storage();
+
 @NgModule({
   declarations: [
     LoginComponent,
