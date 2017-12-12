@@ -16,6 +16,7 @@ import { PageNotFoundComponent } from './../public/page-not-found/page-not-found
 // gallary
 import { Template01Component } from './../gallery/01-Launchpad/template01.component';
 import { Template02Component } from './../gallery/02-Legacy/template02.component';
+import { Template03Component } from './../gallery/03-split01/template03.component';
 
 // core
 import { AuthGuard } from './auth.guard';
@@ -43,6 +44,7 @@ export const router: Routes = [
     // gallery
     { path: 'gallery/01-launchpad', component: Template01Component },
     { path: 'gallery/02-legacy', component: Template02Component },
+    { path: 'gallery/03-split01', component: Template03Component },
     
 
     // dashboard routes

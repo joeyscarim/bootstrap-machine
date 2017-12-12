@@ -1,0 +1,105 @@
+body {
+    height: 100% !important;
+    background-color: #e2e2e2 !important;
+	font-family: 'Roboto', sans-serif !important;
+	margin-top: 0px !important;
+}
+
+html{
+	height: 100% !important;
+}
+
+/* image background - only on lg screens */
+@media only screen and (min-width: 992px) {
+    #background-image {
+        position: fixed;
+        left: 50%;
+        height: 100%;
+        width: 100%;
+		/* background-image: url('img/background.jpg'); */
+		background-color:pink;
+        background-size: cover;
+    }
+}
+
+.icon-check {
+    color: #22904f;
+    margin-top: 3px;
+}
+
+.link {
+    color: #22904f;
+}
+
+.link:hover {
+    color: #1c7540;
+}
+
+.text-gray {
+    color: #353535;
+}
+
+.text-light-gray {
+    color: gray;
+}
+
+.btn-submit {
+    background-color: #22904f;
+    border-color: #22904f;
+    color: white;
+    cursor: pointer;
+}
+
+.btn-submit:hover {
+    background-color: #1c7540;
+    border-color: #1c7540;
+}
+
+.circle-facebook {
+    color: #3B5998;
+    cursor: pointer;
+}
+
+.circle-facebook:hover {
+    color: #24375c;
+}
+
+.circle-twitter {
+    color: #1b93d8;
+    cursor: pointer;
+}
+
+.circle-twitter:hover {
+    color: #115980;
+}
+
+.circle-github {
+    cursor: pointer;
+}
+
+.circle-github:hover {
+    color: gray;
+}
+
+.flex-container {
+    display: flex;
+    overflow-y: scroll;
+}
+
+.flex-container > div {
+    margin: auto;
+}
+
+.link-hover {
+    pointer-events: none;
+}
+
+.container-text{
+    max-width:30rem; 
+    padding: 1.25rem;
+}
+
+.container-form{
+    max-width:30rem; 
+    background-color: rgba(255,255,255,.95);
+}

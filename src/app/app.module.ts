@@ -22,6 +22,7 @@ import { FooterComponent } from './partials/footer/footer.component';
 // gallery
 import { Template01Component } from './gallery/01-Launchpad/template01.component';
 import { Template02Component } from './gallery/02-Legacy/template02.component';
+import { Template03Component } from './gallery/03-split01/template03.component';
 
 // elements
 import { ElementNavbar01Component } from './elements/navbars/navbar01/navbar01.component';
@@ -104,6 +105,7 @@ import { DashboardBuilderEditComponent } from './dashboard/edit/edit.component';
 
     Template01Component,
     Template02Component,
+    Template03Component,
 
     FooterComponent,
     UsageRulesComponent,
